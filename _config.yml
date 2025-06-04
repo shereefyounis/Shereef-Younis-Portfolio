@@ -1,0 +1,12 @@
+# Site settings
+title: Shereef Younis
+email: shereefeyounis@gmail.com
+description: "A convenient space to showcase the projects and other work I completed during my college courses or on my own time."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+twitter_username:
+github_username:
+
+# Build settings
+markdown: kramdown
