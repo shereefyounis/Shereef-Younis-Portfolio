@@ -56,7 +56,9 @@ address:
   - line: Beverly Hills, CA 90210
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: This site is a Jekyll Theme Template created by Jeromelachaud and modified by me (Shereef Younis).
+
+Jeromelachaud's Links: https://github.com/jeromelachaud/freelancer-theme & https://jekyllthemes.io/theme/freelancer-theme
 
 # Build settings
 markdown: kramdown
