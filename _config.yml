@@ -39,26 +39,17 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+  - title: linkedin
+    url: https://www.linkedin.com/in/shereef-younis 
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/shereefyounis
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: San Francisco Bay Area
 
 # Credits content
 credits: This site is a Jekyll Theme Template created by Jeromelachaud and modified by me (Shereef Younis).
-
-Jeromelachaud's Links: https://github.com/jeromelachaud/freelancer-theme & https://jekyllthemes.io/theme/freelancer-theme
 
 # Build settings
 markdown: kramdown
