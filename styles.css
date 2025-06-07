@@ -359,10 +359,6 @@ html {
   border-top: 1px solid var(--slate-700);
 }
 
-.about-grid {
-  align-items: center;
-}
-
 @media (min-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
@@ -374,6 +370,7 @@ html {
   color: var(--slate-300);
   margin-bottom: 1.5rem;
   line-height: 1.7;
+  text-align: center;
 }
 
 .skills-section {
