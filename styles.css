@@ -360,15 +360,7 @@ html {
 }
 
 .about-grid {
-  display: grid;
-  gap: 4rem;
   place-items: center;
-}
-
-@media (min-width: 1024px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .about-text {
