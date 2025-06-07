@@ -506,6 +506,7 @@ style.textContent = `
         line-height: 1.4;
     }
     
+
     @media (max-width: 640px) {
         .modal-content {
             margin: 1rem;
@@ -526,4 +527,5 @@ style.textContent = `
         }
     }
 `;
+
 document.head.appendChild(style);
