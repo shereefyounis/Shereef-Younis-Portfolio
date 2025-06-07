@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Johnson - Creative Developer Portfolio</title>
-    <meta name="description" content="Creative developer specializing in modern web applications with React, Node.js, and cutting-edge technologies. View my projects and get in touch.">
+    <title>Shereef Younis - User Experience Designer Portfolio</title>
+    <meta name="description" content="A convenient space to showcase the projects and other work I completed during my college courses or on my own time.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
+
     <!-- Navigation -->
     <header class="nav-header">
         <nav class="nav-container">
             <div class="nav-content">
+
+                <!-- Logo / My name -->
                 <div class="nav-logo">
                     <h1>Shereef Younis</h1>
                 </div>
                 
+                <!-- Nav menu / Buttons -->
                 <div class="nav-menu">
                     <div class="nav-links">
                         <button onclick="scrollToSection('home')" class="nav-link">Home</button>
@@ -28,8 +34,9 @@
                     </div>
                 </div>
                 
+                <!-- Mobile Menu Buttons -->
                 <div class="mobile-menu-btn">
-                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn"> Testing123...
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
@@ -49,25 +56,33 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section / Home Section -->
     <section id="home" class="hero-section">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
+
+                    <!-- Title -->
                     <h1 class="hero-title">
                         <span>User Experience</span><br>
                         <span class="accent-text">Designer</span>
                     </h1>
+
+                    <!-- Description -->
                     <p class="hero-description">
                         Hi, my name is Shereef Younis and I am a Graphic Designer 
                         attending Arizona State University, pursuing a degree in Graphic Information Technology (BS).
                     </p>
+
+                    <!-- Button -->
                     <div class="hero-buttons">
                         <button onclick="scrollToSection('projects')" class="btn btn-primary">
                             View My Work
                         </button>
                     </div>
                 </div>
+
+                <!-- My Picture -->
                 <div class="hero-image">
                     <img 
                         src="Img/profile.png" 
@@ -82,55 +97,77 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
+
+            <!-- About Me Title -->
             <div class="section-header">
-                <div class="section-badge">About Me</div>
                 <h2 class="section-title">About Me</h2>
-                <p class="section-description">
-                    Passionate about creating digital experiences that make a difference
-                </p>
             </div>
             
+            <!-- About Me Text (Paragraphs) -->
             <div class="about-grid">
                 <div class="about-content">
+
                     <p class="about-text">
-                        With over 5 years of experience in web development, I specialize in creating 
-                        modern, responsive applications using cutting-edge technologies. My passion lies 
-                        in transforming complex ideas into elegant, user-friendly solutions.
+                        Hello, my name is Shereef Younis, and I am a graphic designer with a passion for interactive design. 
+                        I am currently attending Arizona State University, where I am pursuing a Bachelor of Science in Graphic Information Technology. 
                     </p>
+
                     <p class="about-text">
-                        I believe in the power of clean code, thoughtful design, and continuous learning. 
-                        Every project is an opportunity to push boundaries and deliver exceptional results.
+                        I'm pursuing a career in Graphic Design to showcase my passion for the interaction between designers and users. 
+                        This includes enhancing user interactions and strengthening the relationships between users and designers through 
+                        websites, video games, product marketing, and more, as well as communicating ideas through visual languages and 
+                        applying design psychology principles to assist others. 
+                    </p>
+
+                    <p class="about-text">
+                        My career goal in design, particularly in interactive design and UX, is to connect with audiences 
+                        through the power of design across various industries such as video games, product websites, and more.
+                    </p>
+
+                    <p class="about-text">
+                        My career goal in design, particularly in interactive design and UX, is to connect with audiences 
+                        through the power of design across various industries such as video games, product websites, and more.
                     </p>
                     
+                    <!-- About Me Tags / Skills -->
                     <div class="skills-section">
-                        <h3 class="skills-title">Core Technologies</h3>
+                        <h3 class="skills-title">Skills</h3>
                         <div class="skills-grid">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">Adobe Photoshop</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Human Systems Understanding</span>
+                            <span class="skill-tag">Problem-Solving</span>
+                            <span class="skill-tag">Ideation-Sketching</span>
+                            <span class="skill-tag">Prototype</span>
                         </div>
                     </div>
                 </div>
                 
+                <!-- About Me Pictures -->
                 <div class="about-images">
+                    <!-- Pic 1 -->
                     <img 
                         src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
                         alt="Modern development workspace" 
                         class="about-img"
                     >
+                    <!-- Pic 2 -->
                     <img 
                         src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
                         alt="Coding on laptop" 
                         class="about-img"
                     >
+                    <!-- Pic 3 -->
                     <img 
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
                         alt="Team collaboration" 
                         class="about-img"
                     >
+                    <!-- Pic 4 -->
                     <img 
                         src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
                         alt="Design mockups and wireframes" 
