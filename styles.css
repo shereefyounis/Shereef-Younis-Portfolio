@@ -1,6 +1,9 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+
+
+
 /* CSS Variables for Dark Theme */
 :root {
   --background: hsl(220, 26%, 8%);
@@ -15,6 +18,9 @@
   --primary-foreground: hsl(210, 40%, 98%);
   --accent: hsl(45, 93%, 47%);
   
+
+
+
   /* Semantic colors */
   --slate-300: hsl(213, 27%, 84%);
   --slate-400: hsl(215, 20%, 65%);
@@ -25,6 +31,9 @@
   
   --radius: 0.5rem;
 }
+
+
+
 
 /* Reset and Base Styles */
 * {
@@ -46,6 +55,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 /* Utility Classes */
 .container {
   max-width: 1200px;
@@ -64,6 +76,9 @@ html {
     padding: 0 2rem;
   }
 }
+
+
+
 
 /* Button Styles */
 .btn {
@@ -105,6 +120,9 @@ html {
 .btn-full {
   width: 100%;
 }
+
+
+
 
 /* Navigation */
 .nav-header {
@@ -167,6 +185,9 @@ html {
   color: var(--primary);
 }
 
+
+
+
 /* Mobile Menu */
 .mobile-menu-btn {
   display: block;
@@ -227,6 +248,9 @@ html {
 .mobile-link:hover {
   color: var(--primary);
 }
+
+
+
 
 /* Hero Section */
 .hero-section {
@@ -315,6 +339,9 @@ html {
   border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
+
+
+
 /* Section Styles */
 .section-header {
   text-align: center;
@@ -351,6 +378,9 @@ html {
   max-width: 48rem;
   margin: 0 auto;
 }
+
+
+
 
 /* About Section */
 .about-section {
@@ -396,6 +426,9 @@ html {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
+
+
 
 /* Projects Section */
 .projects-section {
@@ -478,6 +511,9 @@ html {
 .project-link-text:hover {
   color: var(--primary-hover);
 }
+
+
+
 
 /* Contact Section */
 .contact-section {
@@ -573,6 +609,9 @@ html {
   height: 1.25rem;
 }
 
+
+
+
 /* Form Styles */
 .contact-form {
   display: flex;
@@ -616,6 +655,9 @@ html {
   min-height: 120px;
 }
 
+
+
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--slate-700);
@@ -628,6 +670,9 @@ html {
   color: var(--slate-400);
   font-size: 0.875rem;
 }
+
+
+
 
 /* Modal Styles */
 .modal {
@@ -766,6 +811,9 @@ html {
 .info-value {
   color: var(--slate-300);
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 640px) {
