@@ -361,7 +361,6 @@ html {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 4rem;
   place-items: center;
 }
