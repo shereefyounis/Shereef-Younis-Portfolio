@@ -2,10 +2,10 @@
 const projects = [
     {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce solution with modern UI, payment integration, and admin dashboard.",
+        title: "Fangamer Wireframe",
+        description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
         overview: "This e-commerce platform was designed to provide a seamless shopping experience for both customers and administrators. The project involved creating a scalable architecture that could handle high traffic volumes while maintaining excellent performance.",
-        imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        imageUrl: "Logos/Fangamer Logo.png",
         technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
         features: [
             "User authentication and authorization system",
@@ -30,7 +30,7 @@ const projects = [
     },
     {
         id: 2,
-        title: "Task Management App",
+        title: "eDreams Wireframe",
         description: "Collaborative project management tool with real-time updates and team collaboration features.",
         overview: "A comprehensive task management application designed to streamline team collaboration and project tracking. Built with modern technologies to ensure real-time updates and seamless user experience.",
         imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
@@ -57,7 +57,7 @@ const projects = [
     },
     {
         id: 3,
-        title: "Social Media Platform",
+        title: "Jones Soda Poster",
         description: "Modern social networking platform with real-time messaging and content sharing capabilities.",
         overview: "A full-featured social media platform with focus on user engagement and content discovery. Includes real-time messaging, media sharing, and advanced recommendation algorithms.",
         imageUrl: "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
@@ -83,7 +83,7 @@ const projects = [
     },
     {
         id: 4,
-        title: "Analytics Dashboard",
+        title: "TBD 1",
         description: "Advanced data visualization platform with interactive charts and real-time analytics.",
         overview: "A comprehensive analytics platform that transforms complex data into actionable insights through interactive visualizations and real-time monitoring capabilities.",
         imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
@@ -109,7 +109,7 @@ const projects = [
     },
     {
         id: 5,
-        title: "AI Chat Assistant",
+        title: "TBD 2",
         description: "Intelligent conversational AI platform with natural language processing and machine learning.",
         overview: "An advanced AI chat assistant leveraging cutting-edge natural language processing to provide intelligent, context-aware conversations and automated customer support.",
         imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
@@ -135,7 +135,7 @@ const projects = [
     },
     {
         id: 6,
-        title: "Fitness Tracker",
+        title: "TBD 3",
         description: "Comprehensive fitness tracking application with workout plans and progress monitoring.",
         overview: "A complete fitness ecosystem that helps users track their workouts, monitor progress, and achieve their health goals through personalized training plans and detailed analytics.",
         imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
