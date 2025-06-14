@@ -383,11 +383,33 @@ function handleFormSubmit(event) {
         message: formData.get('message')
     };
     
-    // Show success message
-    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-    
-    // Reset form
-    event.target.reset();
+    // Contact Form (Show loading state)
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';    // Send email using EmailJS
+    emailjs.send(
+        'service_3nyk5mo',
+        'template_vlspnll',
+        {
+            name: data.name,
+            email: data.email,
+            subject: data.subject,
+            message: data.message
+        }
+    )
+    .then(() => {
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        event.target.reset();
+    })
+    .catch((error) => {
+        showNotification('Failed to send message. Please try again.', 'error');
+        console.error('EmailJS error:', error);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+    });
 }
 
 // Show notification
