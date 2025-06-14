@@ -748,9 +748,18 @@ html {
 }
 
 .modal-image {
-  width: 100%;
+  width: 60%;  
+  max-width: 600px;  
+  height: auto;
   border-radius: var(--radius);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto; 
+  display: block; 
+}
+
+@media (max-width: 768px) {
+  .modal-image {
+    width: 100%;  /* Full width on mobile */
+  }
 }
 
 .modal-section {
