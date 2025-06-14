@@ -4,81 +4,80 @@ const projects = [
         id: 1,
         title: "Fangamer Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        overview: "This e-commerce platform was designed to provide a seamless shopping experience for both customers and administrators. The project involved creating a scalable architecture that could handle high traffic volumes while maintaining excellent performance.",
+        overview: "N/A",
         imageUrl: "Logos/Fangamer Logo.png",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
-            "User authentication and authorization system",
-            "Secure payment processing with Stripe integration",
-            "Real-time inventory management",
-            "Responsive admin dashboard",
-            "Advanced search and filtering capabilities",
-            "Order tracking and email notifications"
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A"
         ],
-        challenges: "One of the main challenges was implementing a robust cart system that could handle concurrent user sessions while maintaining data integrity. I solved this by implementing Redis for session management and optimistic locking for inventory updates.",
-        client: "Personal Project",
-        timeline: "8 weeks",
-        role: "Full-Stack Developer",
-        status: "Completed",
-        liveUrl: "https://example-ecommerce.com",
-        githubUrl: "https://github.com/example/ecommerce",
+        challenges: "N/A",
+        client: "N/A",
+        timeline: "N/A",
+        role: "N/A",
+        status: "N/A",
+        OriginalUrl: "N/A",
+        githubUrl: "N/A",
         galleryImages: [
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
         ]
     },
     {
         id: 2,
         title: "eDreams Wireframe",
-        description: "Collaborative project management tool with real-time updates and team collaboration features.",
-        overview: "A comprehensive task management application designed to streamline team collaboration and project tracking. Built with modern technologies to ensure real-time updates and seamless user experience.",
-        imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        technologies: ["Vue.js", "Express", "Socket.io", "PostgreSQL"],
+        description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
+        overview: "N/A",
+        imageUrl: "Logos/Fangamer Logo.png",
+        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
-            "Real-time collaboration",
-            "Kanban board interface",
-            "Team member management",
-            "Progress tracking",
-            "File attachments",
-            "Due date notifications"
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A"
         ],
-        challenges: "Implementing real-time synchronization across multiple users while maintaining data consistency was the primary challenge.",
-        client: "Startup Company",
-        timeline: "6 weeks",
-        role: "Frontend Developer",
-        status: "Completed",
-        liveUrl: "https://example-tasks.com",
-        githubUrl: "https://github.com/example/tasks",
+        challenges: "N/A",
+        client: "N/A",
+        timeline: "N/A",
+        role: "N/A",
+        status: "N/A",
+        OriginalUrl: "N/A",
+        githubUrl: "N/A",
         galleryImages: [
-            "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
         ]
     },
     {
         id: 3,
         title: "Jones Soda Poster",
-        description: "Modern social networking platform with real-time messaging and content sharing capabilities.",
-        overview: "A full-featured social media platform with focus on user engagement and content discovery. Includes real-time messaging, media sharing, and advanced recommendation algorithms.",
-        imageUrl: "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
+        description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
+        overview: "N/A",
+        imageUrl: "Logos/Fangamer Logo.png",
+        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
-            "Real-time messaging",
-            "Media sharing",
-            "User profiles",
-            "News feed algorithm",
-            "Push notifications",
-            "Content moderation"
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A"
         ],
-        challenges: "Building a scalable real-time messaging system that could handle thousands of concurrent users.",
-        client: "Tech Startup",
-        timeline: "12 weeks",
-        role: "Mobile Developer",
-        status: "In Progress",
-        liveUrl: "https://example-social.com",
-        githubUrl: "https://github.com/example/social",
+        challenges: "N/A",
+        client: "N/A",
+        timeline: "N/A",
+        role: "N/A",
+        status: "N/A",
+        OriginalUrl: "https://www.jonessoda.com/",
         galleryImages: [
-            "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
         ]
     },
 
@@ -226,12 +225,12 @@ function openProjectModal(project) {
         
         <div class="modal-section">
             <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                ${project.liveUrl ? `
-                    <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                ${project.OriginalUrl ? `
+                    <a href="${project.OriginalUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
-                        Live Demo
+                        Original Site
                     </a>
                 ` : ''}
                 ${project.githubUrl ? `
