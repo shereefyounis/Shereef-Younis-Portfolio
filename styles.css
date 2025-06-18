@@ -700,7 +700,7 @@ html {
 .modal-content {
   background-color: var(--slate-800);
   border-radius: var(--radius);
-  width: auto;
+  width: 1800px;
   max-height: 90vh;
   overflow-y: auto;
   border: 4px solid var(--slate-700);

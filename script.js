@@ -57,9 +57,9 @@ const projects = [
     {
         id: 3,
         title: "Jones Soda Poster",
-        description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
+        description: "A poster created in my Digital Illustration in Publishing Course (GIT 230) for a known brand using Adobe Illustrator.",
         overview: "N/A",
-        imageUrl: "Logos/Fangamer Logo.png",
+        imageUrl: "Logos/Jones Soda Logo.png",
         technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
             "N/A",
@@ -70,14 +70,13 @@ const projects = [
             "N/A"
         ],
         challenges: "N/A",
-        client: "N/A",
-        timeline: "N/A",
-        role: "N/A",
-        status: "N/A",
+        course: "Digital Illustration in Publishing (GIT 230)",
+        program: "Adobe Photoshop",
+        timeline: "2 Weeks",
+        status: "Completed",
         OriginalUrl: "https://www.jonessoda.com/",
         galleryImages: [
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+            "Projects/Jones Soda Poster Project.png",
         ]
     },
 
@@ -185,16 +184,22 @@ function openProjectModal(project) {
                         <div class="info-value">${project.client}</div>
                     </div>
                 ` : ''}
+                ${project.course ? `
+                    <div class="info-item">
+                        <div class="info-label">Course</div>
+                        <div class="info-value">${project.course}</div>
+                    </div>
+                ` : ''}
                 ${project.timeline ? `
                     <div class="info-item">
                         <div class="info-label">Timeline</div>
                         <div class="info-value">${project.timeline}</div>
                     </div>
                 ` : ''}
-                ${project.role ? `
+                ${project.program ? `
                     <div class="info-item">
-                        <div class="info-label">Role</div>
-                        <div class="info-value">${project.role}</div>
+                        <div class="info-label">Program</div>
+                        <div class="info-value">${project.program}</div>
                     </div>
                 ` : ''}
                 ${project.status ? `
@@ -212,11 +217,9 @@ function openProjectModal(project) {
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
                     ${project.galleryImages.map((image, index) => `
                         <img 
-                            src="${image}" 
+                            src="${image}"
                             alt="${project.title} screenshot ${index + 1}"
-                            style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); cursor: pointer; transition: transform 0.2s ease;"
-                            onmouseover="this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.transform='scale(1)'"
+                            style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; text-align: center;"
                         >
                     `).join('')}
                 </div>
