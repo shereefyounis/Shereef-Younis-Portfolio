@@ -4,7 +4,7 @@ const projects = [
         id: 1,
         title: "Fangamer Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        overview: "N/A",
+        focus: "N/A",
         imageUrl: "Logos/Fangamer Logo.png",
         technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
@@ -31,7 +31,7 @@ const projects = [
         id: 2,
         title: "eDreams Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        overview: "N/A",
+        focus: "N/A",
         imageUrl: "Logos/Fangamer Logo.png",
         technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
@@ -57,23 +57,20 @@ const projects = [
     {
         id: 3,
         title: "Jones Soda Poster",
-        description: "A poster created in my Digital Illustration in Publishing Course (GIT 230) for a known brand using Adobe Illustrator.",
-        overview: "N/A",
+        description: "- A poster created in my Digital Illustration in Publishing Course (GIT 230) for a known brand using Adobe Illustrator.",
+        about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
         imageUrl: "Logos/Jones Soda Logo.png",
-        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A"
+            "Adobe Photoshop",
+            "Branding",
+            "Design",
+            "Speaking to Audience"
         ],
-        challenges: "N/A",
-        course: "Digital Illustration in Publishing (GIT 230)",
-        program: "Adobe Photoshop",
-        timeline: "2 Weeks",
-        status: "Completed",
+        challenges: "- The main challenge was to effectively capture the essence of the brand while applying the skills learned in the course to speak out to the audience. Experimenting with different design elements and ensuring that the poster was visually appealing and aligned with the brand's identity was one of the challenges I faced during this project.",
+        course: "- Digital Illustration in Publishing (GIT 230)",
+        program: "- Adobe Photoshop",
+        timeline: "- 2 Weeks",
+        status: "- Completed",
         OriginalUrl: "https://www.jonessoda.com/",
         galleryImages: [
             "Projects/Jones Soda Poster Project.png",
@@ -148,8 +145,8 @@ function openProjectModal(project) {
         >
         
         <div class="modal-section">
-            <div class="modal-section-title">Project Overview</div>
-            <div class="modal-text">${project.overview}</div>
+            <div class="modal-section-title">Project Description</div>
+            <div class="modal-text">${project.about}</div>
         </div>
         
         ${project.features && project.features.length > 0 ? `
