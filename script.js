@@ -20,44 +20,43 @@ const projects = [
         timeline: "N/A",
         role: "N/A",
         status: "N/A",
-        OriginalUrl: "N/A",
-        githubUrl: "N/A",
+        OriginalUrl: "https://www.fangamer.com/",
         galleryImages: [
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+            "Projects/Fangamer screenshot 1.png",
+            "Projects/Fangamer screenshot 2.png",
+            "Projects/Fangamer screenshot 3.png",
+            "Projects/Fangamer screenshot 4.png",
         ]
     },
     {
         id: 2,
         title: "eDreams Wireframe",
-        description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        focus: "N/A",
-        imageUrl: "Logos/Fangamer Logo.png",
-        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
+        description: "A project done in my Information Design & Usability course (GIT 340), based on existing website “eDreams”, to show the process of creating wireframes and transition to a final frame.",
+        about: "N/A",
+        imageUrl: "Logos/eDreams Logo.png",
         features: [
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A"
+            "Figma",
+            "Design",
+            "Wireframing"
         ],
         challenges: "N/A",
-        client: "N/A",
-        timeline: "N/A",
-        role: "N/A",
-        status: "N/A",
-        OriginalUrl: "N/A",
-        githubUrl: "N/A",
+        course: "- Information Design & Usability (GIT 340)",
+        program: "- Figma",
+        timeline: "- 2 Weeks",
+        status: "- Completed",
+        OriginalUrl: "https://www.edreams.net/",
         galleryImages: [
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+            "Projects/eDreams screenshot 1.png",
+            "Projects/eDreams screenshot 2.png",
+            "Projects/eDreams screenshot 3.png",
+            "Projects/eDreams screenshot 4.png",
+            "Projects/eDreams screenshot 5.png",
         ]
     },
     {
         id: 3,
         title: "Jones Soda Poster",
-        description: "- A poster created in my Digital Illustration in Publishing Course (GIT 230) for a known brand using Adobe Illustrator.",
+        description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
         imageUrl: "Logos/Jones Soda Logo.png",
         features: [
@@ -450,7 +449,6 @@ style.textContent = `
         line-height: 1.4;
     }
     
-
     @media (max-width: 640px) {
         .modal-content {
             margin: 1rem;
