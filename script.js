@@ -4,22 +4,21 @@ const projects = [
         id: 1,
         title: "Fangamer Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        focus: "N/A",
+        about: "- The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.<br><br>- The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.<br><br>- The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.<br><br>- What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.",
         imageUrl: "Logos/Fangamer Logo.png",
         technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
         features: [
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A",
-            "N/A"
+            "Adobe XD",
+            "Design",
+            "Prototyping",
+            "User Interface Design",
+            "Wireframing"
         ],
-        challenges: "N/A",
-        client: "N/A",
-        timeline: "N/A",
-        role: "N/A",
-        status: "N/A",
+        challenges: "- The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that its in the beginning stages so it won't be perfect.",
+        course: "- Digital Publishing (GIT 303)",
+        program: "- Adobe XD",
+        timeline: "- 2 Weeks",
+        status: "- Completed",
         OriginalUrl: "https://www.fangamer.com/",
         galleryImages: [
             "Projects/Fangamer screenshot 1.png",
@@ -32,14 +31,14 @@ const projects = [
         id: 2,
         title: "eDreams Wireframe",
         description: "A project done in my Information Design & Usability course (GIT 340), based on existing website “eDreams”, to show the process of creating wireframes and transition to a final frame.",
-        about: "N/A",
+        about: "- The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.<br><br>- The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.<br><br>- The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.<br><br>- What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.",
         imageUrl: "Logos/eDreams Logo.png",
         features: [
             "Figma",
             "Design",
             "Wireframing"
         ],
-        challenges: "N/A",
+        challenges: "- The main challenge was to effectively analyze the existing eDreams website and identify areas for improvement while creating wireframes that enhance user experience and usability. Ensuring that the wireframes were user-friendly and functional, while also trying to apply the principles of information design and usability, was a significant challenge I faced during this project.",
         course: "- Information Design & Usability (GIT 340)",
         program: "- Figma",
         timeline: "- 2 Weeks",
@@ -166,7 +165,7 @@ function openProjectModal(project) {
         
         ${project.challenges ? `
             <div class="modal-section">
-                <div class="modal-section-title">Technical Challenges</div>
+                <div class="modal-section-title">Challenges</div>
                 <div class="modal-text">${project.challenges}</div>
             </div>
         ` : ''}
