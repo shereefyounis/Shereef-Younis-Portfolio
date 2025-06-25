@@ -1,6 +1,7 @@
 // Project data
 const projects = [
     {
+        // Project 1: Fangamer Wireframe
         id: 1,
         title: "Fangamer Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
@@ -20,6 +21,7 @@ const projects = [
         timeline: "- 2 Weeks",
         status: "- Completed",
         OriginalUrl: "https://www.fangamer.com/",
+        PrototypeUrl: "https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen",
         galleryImages: [
             "Projects/Fangamer screenshot 1.png",
             "Projects/Fangamer screenshot 2.png",
@@ -28,6 +30,7 @@ const projects = [
         ]
     },
     {
+        // Project 2: eDreams Wireframe
         id: 2,
         title: "eDreams Wireframe",
         description: "A project done in my Information Design & Usability course (GIT 340), based on existing website “eDreams”, to show the process of creating wireframes and transition to a final frame.",
@@ -53,6 +56,7 @@ const projects = [
         ]
     },
     {
+        // Project 3: Jones Soda Poster
         id: 3,
         title: "Jones Soda Poster",
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
@@ -128,7 +132,7 @@ function createProjectCard(project) {
     return card;
 }
 
-// Open project modal
+// Open project modal & Information
 function openProjectModal(project) {
     if (!projectModal || !modalBody) return;
     
@@ -165,7 +169,7 @@ function openProjectModal(project) {
         
         ${project.challenges ? `
             <div class="modal-section">
-                <div class="modal-section-title">Challenges</div>
+                <div class="modal-section-title"> Challenges</div>
                 <div class="modal-text">${project.challenges}</div>
             </div>
         ` : ''}
@@ -209,15 +213,18 @@ function openProjectModal(project) {
         ${project.galleryImages && project.galleryImages.length > 0 ? `
             <div class="modal-section">
                 <div class="modal-section-title">Project Gallery</div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                    ${project.galleryImages.map((image, index) => `
-                        <img 
-                            src="${image}"
-                            alt="${project.title} screenshot ${index + 1}"
-                            style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; text-align: center;"
-                        >
-                    `).join('')}
+                <div class="gallery-carousel">
+                    <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+                    <img 
+                        src="${project.galleryImages[0]}"
+                        alt="${project.title} screenshot 1"
+                        class="gallery-image gallery-image-${project.id}"
+                        id="galleryImage"
+                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
+                    >
+                    <button class="gallery-next" aria-label="Next image">&gt;</button>
                 </div>
+                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
             </div>
         ` : ''}
         
@@ -231,12 +238,12 @@ function openProjectModal(project) {
                         Original Site
                     </a>
                 ` : ''}
-                ${project.githubUrl ? `
-                    <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                ${project.PrototypeUrl ? `
+                    <a href="${project.PrototypeUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
-                        View Code
+                        Prototype
                     </a>
                 ` : ''}
             </div>
@@ -245,6 +252,31 @@ function openProjectModal(project) {
     
     projectModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Carousel functionality for gallery images
+    if (project.galleryImages && project.galleryImages.length > 0) {
+        let currentIndex = 0;
+        const images = project.galleryImages;
+        const galleryImage = document.getElementById('galleryImage');
+        const galleryCounter = document.getElementById('galleryCounter');
+        const prevBtn = modalBody.querySelector('.gallery-prev');
+        const nextBtn = modalBody.querySelector('.gallery-next');
+
+        function updateGallery() {
+            galleryImage.src = images[currentIndex];
+            galleryImage.alt = `${project.title} screenshot ${currentIndex + 1}`;
+            galleryCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        prevBtn.onclick = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+        };
+        nextBtn.onclick = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+        };
+    }
 }
 
 // Close modal
@@ -446,6 +478,61 @@ style.textContent = `
     .notification {
         font-size: 0.875rem;
         line-height: 1.4;
+    }
+    
+    .gallery-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    .gallery-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+        transition: transform 0.2s ease;
+        display: block;
+    }
+    .gallery-image-1 {
+        max-width: 750px;
+        width: 80%;
+    }
+    .gallery-image-2 {
+        max-width: 850px;
+        width: 90%;
+    }
+    .gallery-image-3 {
+        max-width: 400px;
+        width: 60%;
+    }
+    .gallery-prev,
+    .gallery-next {
+        background: var(--slate-800, #222);
+        color: var(--foreground, #fff);
+        border: none;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gallery-prev:hover,
+    .gallery-next:hover {
+        background: var(--primary, #007bff);
+        color: #fff;
+    }
+    .gallery-counter {
+        text-align: center;
+        margin-top: 0.5rem;
+        color: var(--foreground, #fff);
+        font-size: 1rem;
     }
     
     @media (max-width: 640px) {
