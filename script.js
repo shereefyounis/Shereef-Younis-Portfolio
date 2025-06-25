@@ -497,16 +497,22 @@ style.textContent = `
         display: block;
     }
     .gallery-image-1 {
-        max-width: 750px;
+        max-width: 850px;
         width: 80%;
+        max-height: 650px;
+        height: 80%;
     }
     .gallery-image-2 {
-        max-width: 850px;
+        max-width: 900px;
         width: 90%;
+        max-height: 900px;
+        height: 90%;
     }
     .gallery-image-3 {
-        max-width: 400px;
+        max-width: 450px;
         width: 60%;
+        max-height: 700px;
+        height: 60%;
     }
     .gallery-prev,
     .gallery-next {
