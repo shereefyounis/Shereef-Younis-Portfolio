@@ -62,12 +62,6 @@ const projects = [
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
         imageUrl: "Logos/Jones Soda Logo.png",
-        features: [
-            "Adobe Photoshop",
-            "Branding",
-            "Design",
-            "Speaking to Audience"
-        ],
         challenges: "- The main challenge was to effectively capture the essence of the brand while applying the skills learned in the course to speak out to the audience. Experimenting with different design elements and ensuring that the poster was visually appealing and aligned with the brand's identity was one of the challenges I faced during this project.",
         course: "- Digital Illustration in Publishing (GIT 230)",
         program: "- Adobe Photoshop",
@@ -135,16 +129,38 @@ function createProjectCard(project) {
 // Open project modal & Information
 function openProjectModal(project) {
     if (!projectModal || !modalBody) return;
+
+    projectModal.querySelector('.modal-header').innerHTML = `
+    <span class="modal-title">${project.title}</span>
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    `;
     
     modalBody.innerHTML = `
-        <div class="modal-title">${project.title}</div>
-        <div class="modal-description">${project.description}</div>
-        
-        <img 
-            src="${project.imageUrl}" 
-            alt="${project.title}"
-            class="modal-image"
-        >
+       <!--<div class="modal-description">${project.description}</div>-->
+
+        ${project.galleryImages && project.galleryImages.length > 0 ? `
+            <div class="modal-section">
+                <!--<div class="modal-section-title">Project Gallery</div>-->
+                <div class="gallery-carousel">
+                    ${project.galleryImages.length > 1 ? `
+                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+                    ` : ''}
+                    <img 
+                        src="${project.galleryImages[0]}"
+                        alt="${project.title} screenshot 1"
+                        class="gallery-image gallery-image-${project.id}"
+                        id="galleryImage"
+                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
+                    >
+                    ${project.galleryImages.length > 1 ? `
+                        <button class="gallery-next" aria-label="Next image">&gt;</button>
+                    ` : ''} 
+                </div>
+                ${project.galleryImages.length > 1 ? `
+                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
+                ` : ''}
+            </div>
+        ` : ''}
         
         <div class="modal-section">
             <div class="modal-section-title">Project Description</div>
@@ -209,24 +225,6 @@ function openProjectModal(project) {
                 ` : ''}
             </div>
         </div>
-        
-        ${project.galleryImages && project.galleryImages.length > 0 ? `
-            <div class="modal-section">
-                <div class="modal-section-title">Project Gallery</div>
-                <div class="gallery-carousel">
-                    <button class="gallery-prev" aria-label="Previous image">&lt;</button>
-                    <img 
-                        src="${project.galleryImages[0]}"
-                        alt="${project.title} screenshot 1"
-                        class="gallery-image gallery-image-${project.id}"
-                        id="galleryImage"
-                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
-                    >
-                    <button class="gallery-next" aria-label="Next image">&gt;</button>
-                </div>
-                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
-            </div>
-        ` : ''}
         
         <div class="modal-section">
             <div style="display: flex; gap: 1rem; margin-top: 2rem;">
@@ -485,7 +483,7 @@ style.textContent = `
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        margin: 1.5rem 0;
+        <!-- margin: 1.5rem 0; -->
     }
     .gallery-image {
         width: 100%;
