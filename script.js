@@ -5,16 +5,9 @@ const projects = [
         id: 1,
         title: "Fangamer Wireframe",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
+        problem: "-Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won’t be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.",
         about: "- The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.<br><br>- The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.<br><br>- The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.<br><br>- What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.",
         imageUrl: "Logos/Fangamer Logo.png",
-        technologies: ["N/A", "N/A", "N/A", "N/A", "N/A"],
-        features: [
-            "Adobe XD",
-            "Design",
-            "Prototyping",
-            "User Interface Design",
-            "Wireframing"
-        ],
         challenges: "- The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that its in the beginning stages so it won't be perfect.",
         course: "- Digital Publishing (GIT 303)",
         program: "- Adobe XD",
@@ -22,7 +15,7 @@ const projects = [
         status: "- Completed",
         OriginalUrl: "https://www.fangamer.com/",
         PrototypeUrl: "https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen",
-        galleryImages: [
+        finalImages: [
             "Projects/Fangamer screenshot 1.png",
             "Projects/Fangamer screenshot 2.png",
             "Projects/Fangamer screenshot 3.png",
@@ -34,25 +27,23 @@ const projects = [
         id: 2,
         title: "eDreams Wireframe",
         description: "A project done in my Information Design & Usability course (GIT 340), based on existing website “eDreams”, to show the process of creating wireframes and transition to a final frame.",
+        problem: "- Users sometimes need more options after signing in successfully, such as a quick choice to continue or access settings to make changes if needed. Providing users with more freedom and easier access helps them have a smoother experience, as a lack of access could deter them from using the site.<br><br>- Try creating a wireframe that illustrates this scenario based on the travel website eDreams. With multiple types of wireframes, choose one and bring it to life with text, colors, and more to showcase it.",
         about: "- The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.<br><br>- The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.<br><br>- The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.<br><br>- What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.",
         imageUrl: "Logos/eDreams Logo.png",
-        features: [
-            "Figma",
-            "Design",
-            "Wireframing"
-        ],
         challenges: "- The main challenge was to effectively analyze the existing eDreams website and identify areas for improvement while creating wireframes that enhance user experience and usability. Ensuring that the wireframes were user-friendly and functional, while also trying to apply the principles of information design and usability, was a significant challenge I faced during this project.",
         course: "- Information Design & Usability (GIT 340)",
         program: "- Figma",
         timeline: "- 2 Weeks",
         status: "- Completed",
         OriginalUrl: "https://www.edreams.net/",
+        finalImages: [
+            "Projects/eDreams screenshot 5.png",
+        ],
         galleryImages: [
             "Projects/eDreams screenshot 1.png",
             "Projects/eDreams screenshot 2.png",
             "Projects/eDreams screenshot 3.png",
             "Projects/eDreams screenshot 4.png",
-            "Projects/eDreams screenshot 5.png",
         ]
     },
     {
@@ -60,6 +51,7 @@ const projects = [
         id: 3,
         title: "Jones Soda Poster",
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
+        problem: "- Customers typically have limited options when it comes to soda brands, offering a narrow and unappealing selection, which attracts fewer consumers interested in trying new, unique flavors that differ from other brands. Having a wider selection would attract more consumers to the variety of their tasting palate than just a narrow selection.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
         imageUrl: "Logos/Jones Soda Logo.png",
         challenges: "- The main challenge was to effectively capture the essence of the brand while applying the skills learned in the course to speak out to the audience. Experimenting with different design elements and ensuring that the poster was visually appealing and aligned with the brand's identity was one of the challenges I faced during this project.",
@@ -68,7 +60,7 @@ const projects = [
         timeline: "- 2 Weeks",
         status: "- Completed",
         OriginalUrl: "https://www.jonessoda.com/",
-        galleryImages: [
+        finalImages: [
             "Projects/Jones Soda Poster Project.png",
         ]
     },
@@ -138,60 +130,8 @@ function openProjectModal(project) {
     modalBody.innerHTML = `
        <!--<div class="modal-description">${project.description}</div>-->
 
-        ${project.galleryImages && project.galleryImages.length > 0 ? `
-            <div class="modal-section">
-                <!--<div class="modal-section-title">Project Gallery</div>-->
-                <div class="gallery-carousel">
-                    ${project.galleryImages.length > 1 ? `
-                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
-                    ` : ''}
-                    <img 
-                        src="${project.galleryImages[0]}"
-                        alt="${project.title} screenshot 1"
-                        class="gallery-image gallery-image-${project.id}"
-                        id="galleryImage"
-                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
-                    >
-                    ${project.galleryImages.length > 1 ? `
-                        <button class="gallery-next" aria-label="Next image">&gt;</button>
-                    ` : ''} 
-                </div>
-                ${project.galleryImages.length > 1 ? `
-                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
-                ` : ''}
-            </div>
-        ` : ''}
-        
-        <div class="modal-section">
-            <div class="modal-section-title">Project Description</div>
-            <div class="modal-text">${project.about}</div>
-        </div>
-        
-        ${project.features && project.features.length > 0 ? `
-            <div class="modal-section">
-                <div class="modal-section-title">Key Features</div>
-                <ul class="modal-features">
-                    ${project.features.map(feature => `
-                        <li class="modal-feature">
-                            <svg class="feature-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>${feature}</span>
-                        </li>
-                    `).join('')}
-                </ul>
-            </div>
-        ` : ''}
-        
-        ${project.challenges ? `
-            <div class="modal-section">
-                <div class="modal-section-title"> Challenges</div>
-                <div class="modal-text">${project.challenges}</div>
-            </div>
-        ` : ''}
-        
-        <div class="modal-section">
-            <div class="modal-section-title">Project Information</div>
+       <div class="modal-section">
+            <!--<div class="modal-section-title">Project Information:</div>-->
             <div class="modal-info">
                 ${project.client ? `
                     <div class="info-item">
@@ -225,7 +165,83 @@ function openProjectModal(project) {
                 ` : ''}
             </div>
         </div>
+
+
+
+       ${project.finalImages && project.finalImages.length > 0 ? `
+            <div class="modal-section">
+                <div class="gallery-carousel">
+                    ${project.finalImages.length > 1 ? `
+                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+                    ` : ''}
+                    <img 
+                        src="${project.finalImages[0]}"
+                        alt="${project.title} screenshot 1"
+                        class="final-image final-image-${project.id}"
+                        id="finalImages"
+                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
+                    >
+                    ${project.finalImages.length > 1 ? `
+                        <button class="gallery-next" aria-label="Next image">&gt;</button>
+                    ` : ''}
+                </div>
+                ${project.finalImages.length > 1 ? `
+                    <div class="gallery-counter" id="finalCounter">1 / ${project.finalImages.length}</div>
+                ` : ''}
+            </div>
+        ` : ''}
+
+
+
+        <div class="modal-section">
+            <div class="modal-section-title">Project Problem:</div>
+            <div class="modal-text">${project.problem}</div>
+        </div>
+
+
         
+        <div class="modal-section">
+            <div class="modal-section-title">Project Description:</div>
+            <div class="modal-text">${project.about}</div>
+        </div>
+
+
+
+        ${project.challenges ? `
+            <div class="modal-section">
+                <div class="modal-section-title"> Challenges:</div>
+                <div class="modal-text">${project.challenges}</div>
+            </div>
+        ` : ''}
+        
+
+        
+        ${project.galleryImages && project.galleryImages.length > 0 ? `
+            <div class="modal-section">
+                <div class="modal-section-title">Project Gallery:</div>
+                <div class="gallery-carousel">
+                    ${project.galleryImages.length > 1 ? `
+                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+                    ` : ''}
+                    <img 
+                        src="${project.galleryImages[0]}"
+                        alt="${project.title} screenshot 1"
+                        class="gallery-image gallery-image-${project.id}"
+                        id="galleryImage"
+                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
+                    >
+                    ${project.galleryImages.length > 1 ? `
+                        <button class="gallery-next" aria-label="Next image">&gt;</button>
+                    ` : ''} 
+                </div>
+                ${project.galleryImages.length > 1 ? `
+                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
+                ` : ''}
+            </div>
+        ` : ''}
+
+
+
         <div class="modal-section">
             <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                 ${project.OriginalUrl ? `
@@ -250,6 +266,38 @@ function openProjectModal(project) {
     
     projectModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+     // Carousel functionality for final images
+    if (project.finalImages && project.finalImages.length > 1) {
+        let finalIndex = 0;
+        const finalImgs = project.finalImages;
+        const finalImage = document.getElementById('finalImages');
+        const finalCounter = document.getElementById('finalCounter');
+        const finalSection = modalBody.querySelectorAll('.modal-section')[1]; // Adjust index if needed
+        const finalPrevBtn = finalSection ? finalSection.querySelector('.gallery-prev') : null;
+        const finalNextBtn = finalSection ? finalSection.querySelector('.gallery-next') : null;
+
+        function updateFinalGallery() {
+            finalImage.src = finalImgs[finalIndex];
+            finalImage.alt = `${project.title} screenshot ${finalIndex + 1}`;
+            if (finalCounter) {
+                finalCounter.textContent = `${finalIndex + 1} / ${finalImgs.length}`;
+            }
+        }
+
+        if (finalPrevBtn) {
+            finalPrevBtn.onclick = () => {
+                finalIndex = (finalIndex - 1 + finalImgs.length) % finalImgs.length;
+                updateFinalGallery();
+            };
+        }
+        if (finalNextBtn) {
+            finalNextBtn.onclick = () => {
+                finalIndex = (finalIndex + 1) % finalImgs.length;
+                updateFinalGallery();
+            };
+        }
+    }
     
     // Carousel functionality for gallery images
     if (project.galleryImages && project.galleryImages.length > 0) {
@@ -276,6 +324,7 @@ function openProjectModal(project) {
         };
     }
 }
+
 
 // Close modal
 function closeModal() {
@@ -494,6 +543,8 @@ style.textContent = `
         transition: transform 0.2s ease;
         display: block;
     }
+
+
     .gallery-image-1 {
         max-width: 850px;
         width: 80%;
@@ -512,6 +563,28 @@ style.textContent = `
         max-height: 700px;
         height: 60%;
     }
+
+
+    .final-image-1 {
+        max-width: 850px;
+        width: 80%;
+        max-height: 650px;
+        height: 80%;
+    }
+    .final-image-2 {
+        max-width: 900px;
+        width: 90%;
+        max-height: 900px;
+        height: 90%;
+    }
+    .final-image-3 {
+        max-width: 450px;
+        width: 60%;
+        max-height: 700px;
+        height: 60%;
+    }
+
+    
     .gallery-prev,
     .gallery-next {
         background: var(--slate-800, #222);

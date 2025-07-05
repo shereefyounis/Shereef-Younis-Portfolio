@@ -833,9 +833,9 @@ html {
 
 .modal-info {
   background-color: var(--slate-900);
-  padding: 1.5rem;
+  padding: 1rem 1rem 0;
   border-radius: var(--radius);
-  border: 1px solid var(--slate-700);
+  border: 2px solid var(--slate-700);
 }
 
 .info-item {
