@@ -1,306 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shereef Younis - User Experience Designer Portfolio</title>
-        <meta name="description" content="A convenient space to showcase the projects and other work I completed during my college courses or on my own time.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shereef Younis - User Experience Designer Portfolio</title>
+    <meta name="description" content="A convenient space to showcase the projects and other work I completed during my college courses or on my own time.">
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-
-    <body>
-
-
-
-        <!-- Navigation -->
-        <header class="nav-header">
-            <nav class="nav-container">
-                <div class="nav-content">
-
-                    <!-- Logo / My name -->
-                    <div class="nav-logo">
-                        <h1>Shereef Younis</h1>
+<body>
+    <!-- ========================================
+         NAVIGATION HEADER
+    ========================================= -->
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo / My name -->
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                
+                <!-- Nav menu / Buttons -->
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                        <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                        <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
+                        <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
                     </div>
-                    
-                    <!-- Nav menu / Buttons -->
-                    <div class="nav-menu">
-                        <div class="nav-links">
-                            <button onclick="scrollToSection('home')" class="nav-link">Home</button>
-                            <button onclick="scrollToSection('about')" class="nav-link">About</button>
-                            <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
-                            <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Mobile Menu Buttons -->
-                    <div class="mobile-menu-btn">
-                        <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-                            <span class="hamburger"></span>
-                            <span class="hamburger"></span>
-                            <span class="hamburger"></span>
+                </div>
+                
+                <!-- Mobile Menu Buttons -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="scrollToSection('home'); closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="scrollToSection('about'); closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="scrollToSection('projects'); closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="scrollToSection('contact'); closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <!-- Title -->
+                    <h1 class="hero-title">
+                        <span>User Experience</span><br>
+                        <span class="accent-text">Designer</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        Hi, my name is Shereef Younis and I am a Graphic Designer 
+                        attending Arizona State University, pursuing a degree in Graphic Information Technology (BS).
+                    </p>
+
+                    <!-- Button -->
+                    <div class="hero-buttons">
+                        <button onclick="scrollToSection('projects')" class="btn btn-primary">
+                            View My Work
                         </button>
                     </div>
                 </div>
-                
-                <!-- Mobile menu -->
-                <div class="mobile-menu" id="mobileMenu">
-                    <div class="mobile-menu-content">
-                        <button onclick="scrollToSection('home'); closeMobileMenu()" class="mobile-link">Home</button>
-                        <button onclick="scrollToSection('about'); closeMobileMenu()" class="mobile-link">About</button>
-                        <button onclick="scrollToSection('projects'); closeMobileMenu()" class="mobile-link">Projects</button>
-                        <button onclick="scrollToSection('contact'); closeMobileMenu()" class="mobile-link">Contact</button>
-                    </div>
-                </div>
-            </nav>
-        </header>
 
-
-
-        <!-- Hero Section / Home Section -->
-        <section id="home" class="hero-section">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-
-                        <!-- Title -->
-                        <h1 class="hero-title">
-                            <span>User Experience</span><br>
-                            <span class="accent-text">Designer</span>
-                        </h1>
-
-                        <!-- Description -->
-                        <p class="hero-description">
-                            Hi, my name is Shereef Younis and I am a Graphic Designer 
-                            attending Arizona State University, pursuing a degree in Graphic Information Technology (BS).
-                        </p>
-
-                        <!-- Button -->
-                        <div class="hero-buttons">
-                            <button onclick="scrollToSection('projects')" class="btn btn-primary">
-                                View My Work
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- My Picture -->
-                    <div class="hero-image">
-                        <img 
-                            src="Img/profile.png" 
-                            alt="Shereef Younis Portrait" 
-                            class="profile-img"
-                        >
-                    </div>
+                <!-- My Picture -->
+                <div class="hero-image">
+                    <img 
+                        src="Img/profile.png" 
+                        alt="Shereef Younis Portrait" 
+                        class="profile-img"
+                    >
                 </div>
             </div>
-        </section>
-
-
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-
-                <!-- About Me Title -->
-                <div class="section-header">
-                    <h2 class="section-title">About Me</h2>
-                </div>
-                
-                <!-- About Me Text (Paragraphs) -->
-                <div class="about-grid">
-                    <div class="about-content">
-
-                        <p class="about-text">
-                            Hello, my name is Shereef Younis, and I am a graphic designer with a passion for interactive design. 
-                            I am currently attending Arizona State University, where I am pursuing a Bachelor of Science in Graphic Information Technology. 
-                        </p>
-
-                        <p class="about-text">
-                            I'm pursuing a career in Graphic Design to showcase my passion for the interaction between designers and users. 
-                            This includes enhancing user interactions and strengthening the relationships between users and designers through 
-                            websites, video games, product marketing, and more, as well as communicating ideas through visual languages and 
-                            applying design psychology principles to assist others. 
-                        </p>
-
-                        <p class="about-text">
-                            My career goal in design, particularly in interactive design and UX, is to connect with audiences 
-                            through the power of design across various industries such as video games, product websites, and more.
-                        </p>
-
-                        <!-- About Me Tags / Skills -->
-                        <div class="skills-section">
-                            <h3 class="skills-title">Skills</h3>
-                            <div class="skills-grid">
-                                <span class="skill-tag">Figma</span>
-                                <span class="skill-tag">Adobe XD</span>
-                                <span class="skill-tag">Adobe Illustrator</span>
-                                <span class="skill-tag">Adobe Photoshop</span>
-                                <span class="skill-tag">HTML</span>
-                                <span class="skill-tag">CSS</span>
-                                <span class="skill-tag">Human Systems Understanding</span>
-                                <span class="skill-tag">Problem-Solving</span>
-                                <span class="skill-tag">Ideation-Sketching</span>
-                                <span class="skill-tag">Prototype</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-
-                <!-- Project Title & Description -->
-                <div class="section-header">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-description">
-                        A display of projects from college courses and free time
-                    </p>
-                </div>
-                
-                <!-- Project Grids -->
-                <div class="projects-grid" id="projectsGrid">
-                    <!-- Projects will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-
-                <!-- Contact Title & Description -->
-                <div class="section-header">
-                    <h2 class="section-title">Contact</h2>
-                    <p class="section-description">
-                        Some ways to stay connected and reach out to me!
-                    </p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-
-                        <!-- Get In Touch Section Title -->
-                        <h3 class="contact-title">Get In Touch</h3>
-
-                        <!-- Get In Touch Section Icons / Items -->
-                        <div class="contact-items">
-                            
-                            <!-- Get In Touch Section (LinkedIn) -->
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <div class="icon">
-                                        <a href="https://www.linkedin.com/in/shereef-younis" style="display: flex; justify-content: center; align-items: center;">
-                                            <img src="Icons/LinkedIn Icon.png" alt="LinkedIn Icon">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="contact-label">LinkedIn</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Get In Touch Section (GitHub) -->
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <div class="icon">
-                                        <a href="https://github.com/shereefyounis" style="display: flex; justify-content: center; align-items: center;">
-                                            <img src="Icons/GitHub Icon.png" alt="GitHub Icon">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="contact-label">GitHub</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <!-- Contact Form -->
-                    <div class="contact-form-container">
-                        <form class="contact-form" onsubmit="handleFormSubmit(event)">
-
-                            <!-- Contact Form Full Name-->
-                            <div class="form-group">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    class="form-input"
-                                >
-                            </div>
-                            
-                            <!-- Contact Form Email -->
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    class="form-input"
-                                >
-                            </div>
-
-                            <!-- Contact Form Subject -->
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
-                                    required
-                                    class="form-input"
-                                >
-                            </div>
-                            
-                            <!-- Contact Form Message -->
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="5"
-                                    required
-                                    class="form-textarea"
-                                ></textarea>
-                            </div>
-                            
-                            <!-- Contact Form Submit Button -->
-                            <button type="submit" class="btn btn-primary btn-full">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Simple Copyright Footer -->
-        <div class="footer">
-            <p class="footer-text">
-                © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
-            </p>
         </div>
+    </section>
 
-        <!-- EmailJS Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script>
-            (function() {
-                emailjs.init("9cQ_4ypSelZBoPp1k");
-            })();
-        </script>
 
-        <script src="script.js"></script>
-    </body>
+    <!-- ========================================
+        ABOUT SECTION
+    ========================================= -->
+
+    <section id="about" class="about-section">
+        <div class="container">
+
+
+            <!-- About Me Title -->
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+
+            <!-- About Me Text (Paragraphs) -->
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        Hello, my name is Shereef Younis, and I am a graphic designer with a passion for interactive design. 
+                        I am currently attending Arizona State University, where I am pursuing a Bachelor of Science in Graphic Information Technology. 
+                    </p>
+
+                    <p class="about-text">
+                        I'm pursuing a career in Graphic Design to showcase my passion for the interaction between designers and users. 
+                        This includes enhancing user interactions and strengthening the relationships between users and designers through 
+                        websites, video games, product marketing, and more, as well as communicating ideas through visual languages and 
+                        applying design psychology principles to assist others. 
+                    </p>
+
+                    <p class="about-text">
+                        My career goal in design, particularly in interactive design and UX, is to connect with audiences 
+                        through the power of design across various industries such as video games, product websites, and more.
+                    </p>
+
+
+                    <!-- About Me Tags / Skills -->
+                    <div class="skills-section">
+                        <h3 class="skills-title">Skills</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">Adobe Photoshop</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Human Systems Understanding</span>
+                            <span class="skill-tag">Problem-Solving</span>
+                            <span class="skill-tag">Ideation-Sketching</span>
+                            <span class="skill-tag">Prototype</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+    ========================================= -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <!-- Project Title & Description -->
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A display of projects from college courses and free time
+                </p>
+            </div>
+            
+            <!-- Project Grids -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+    ========================================= -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <!-- Contact Title & Description -->
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-description">
+                    Some ways to stay connected and reach out to me!
+                </p>
+            </div>
+                
+
+            <!-- Contact Grid -->
+            <div class="contact-grid">
+                <div class="contact-info">
+
+                    <!-- Get In Touch Section Title -->
+                    <h3 class="contact-title">Get In Touch</h3>
+
+                    <!-- Get In Touch Section Icons / Items -->
+                    <div class="contact-items">
+                            
+                        <!-- Get In Touch Section (LinkedIn) -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <div class="icon">
+                                    <a href="https://www.linkedin.com/in/shereef-younis" style="display: flex; justify-content: center; align-items: center;">
+                                        <img src="Icons/LinkedIn Icon.png" alt="LinkedIn Icon">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="contact-label">LinkedIn</p>
+                            </div>
+                        </div>
+                            
+                        <!-- Get In Touch Section (GitHub) -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <div class="icon">
+                                    <a href="https://github.com/shereefyounis" style="display: flex; justify-content: center; align-items: center;">
+                                        <img src="Icons/GitHub Icon.png" alt="GitHub Icon">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="contact-label">GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+
+                        <!-- Contact Form Full Name-->
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="form-input"
+                            >
+                        </div>
+                        
+                        <!-- Contact Form Email -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="form-input"
+                            >
+                        </div>
+
+                        <!-- Contact Form Subject -->
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                required
+                                class="form-input"
+                            >
+                        </div>
+                        
+                        <!-- Contact Form Message -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                required
+                                class="form-textarea"
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Contact Form Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <div class="footer">
+        <p class="footer-text">
+            © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
+        </p>
+    </div>
+
+    <!-- ========================================
+         JAVASCRIPT & EXTERNAL SCRIPTS
+    ========================================= -->
+    <!-- EmailJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("9cQ_4ypSelZBoPp1k");
+        })();
+    </script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>

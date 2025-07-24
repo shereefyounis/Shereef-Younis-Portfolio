@@ -1,11 +1,15 @@
-// Project data
+// ========================================
+// PROJECT DATA CONFIGURATION
+// ========================================
+
 const projects = [
     {
         // Project 1: Fangamer Wireframe
         id: 1,
         title: "Fangamer Wireframe",
+        type: "academic",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
-        problem: "-Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won’t be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.",
+        problem: "-Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won't be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.",
         about: "- The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.<br><br>- The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.<br><br>- The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.<br><br>- What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.",
         imageUrl: "Logos/Fangamer Logo.png",
         challenges: "- The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that its in the beginning stages so it won't be perfect.",
@@ -26,7 +30,8 @@ const projects = [
         // Project 2: eDreams Wireframe
         id: 2,
         title: "eDreams Wireframe",
-        description: "A project done in my Information Design & Usability course (GIT 340), based on existing website “eDreams”, to show the process of creating wireframes and transition to a final frame.",
+        type: "academic",
+        description: "A project done in my Information Design & Usability course (GIT 340), based on existing website 'eDreams', to show the process of creating wireframes and transition to a final frame.",
         problem: "- Users sometimes need more options after signing in successfully, such as a quick choice to continue or access settings to make changes if needed. Providing users with more freedom and easier access helps them have a smoother experience, as a lack of access could deter them from using the site.<br><br>- Try creating a wireframe that illustrates this scenario based on the travel website eDreams. With multiple types of wireframes, choose one and bring it to life with text, colors, and more to showcase it.",
         about: "- The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.<br><br>- The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.<br><br>- The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.<br><br>- What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.",
         imageUrl: "Logos/eDreams Logo.png",
@@ -50,6 +55,7 @@ const projects = [
         // Project 3: Jones Soda Poster
         id: 3,
         title: "Jones Soda Poster",
+        type: "academic",
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
         problem: "- Customers typically have limited options when it comes to soda brands, offering a narrow and unappealing selection, which attracts fewer consumers interested in trying new, unique flavors that differ from other brands. Having a wider selection would attract more consumers to the variety of their tasting palate than just a narrow selection.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
@@ -67,7 +73,10 @@ const projects = [
 
 ];
 
-// DOM Elements
+// ========================================
+// DOM ELEMENTS & INITIALIZATION
+// ========================================
+
 const projectsGrid = document.getElementById('projectsGrid');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -77,7 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
 });
 
-// Render projects
+// ========================================
+// PROJECT RENDERING FUNCTIONS
+// ========================================
 function renderProjects() {
     if (!projectsGrid) return;
     
@@ -116,13 +127,7 @@ function createProjectCard(project) {
         >
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
-            <p class="project-description">${project.description}</p>
-            
-            <div class="project-link">
-                <span class="project-link-text">
-                    View Project →
-                </span>
-            </div>
+            <div class="project-badge ${project.type}">${project.type}</div>
         </div>
     `;
     
@@ -160,316 +165,150 @@ function closeMobileMenu() {
     
     mobileMenu.classList.remove('active');
     
+    // Reset hamburger animation
     const mobileBtn = document.getElementById('mobileMenuBtn');
     if (mobileBtn) {
         mobileBtn.classList.remove('active');
     }
 }
 
-// Handle form submission
-function handleFormSubmit(event) {
-    event.preventDefault();
-    
-    const formData = new FormData(event.target);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-    };
-    
-    // Contact Form (Show loading state)
-    const submitButton = event.target.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.disabled = true;
-    submitButton.textContent = 'Sending...';    // Send email using EmailJS
-    emailjs.send(
-        'service_3nyk5mo',
-        'template_vlspnll',
-        {
-            name: data.name,
-            email: data.email,
-            subject: data.subject,
-            message: data.message
-        }
-    )
-    .then(() => {
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        event.target.reset();
-    })
-    .catch((error) => {
-        showNotification('Failed to send message. Please try again.', 'error');
-        console.error('EmailJS error:', error);
-    })
-    .finally(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
-    });
-}
-
-// Show notification
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--slate-800);
-        color: var(--foreground);
-        padding: 1rem 1.5rem;
-        border-radius: var(--radius);
-        border: 1px solid var(--slate-700);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        z-index: 1001;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-    `;
-    
-    if (type === 'success') {
-        notification.style.borderLeft = '4px solid var(--primary)';
-    }
-    
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remove after 5 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }, 5000);
-}
-
-// Setup event listeners
+// Add event listeners for navigation
 function setupEventListeners() {
-    // Handle escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeMobileMenu();
-        }
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.nav-header') && mobileMenu && mobileMenu.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768 && mobileMenu && mobileMenu.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Add intersection observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+    // Navigation link handlers
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const href = this.getAttribute('data-href');
+            if (href && href.startsWith('#')) {
+                const targetId = href.substring(1);
+                scrollToSection(targetId);
+                closeMobileMenu();
             }
         });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    document.querySelectorAll('.project-card, .about-img, .skill-tag').forEach(el => {
-        observer.observe(el);
     });
+
+    // Mobile menu button
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Contact form handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const formObject = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', formObject);
+            
+            // Show success message (you can replace this with actual form submission)
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+    }
+
+    // Download resume handler
+    const downloadBtn = document.getElementById('downloadResume');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add your resume download logic here
+            console.log('Resume download requested');
+        });
+    }
 }
 
-// Add some CSS animations for better UX
-const style = document.createElement('style');
-style.textContent = `
-    .mobile-btn.active .hamburger:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .mobile-btn.active .hamburger:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-btn.active .hamburger:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    .notification {
-        font-size: 0.875rem;
-        line-height: 1.4;
-    }
-    
-    .gallery-carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        <!-- margin: 1.5rem 0; -->
-    }
-    .gallery-image {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
-        transition: transform 0.2s ease;
-        display: block;
-    }
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationDelay = '0.1s';
+            entry.target.classList.add('fade-in-up');
+        }
+    });
+}, observerOptions);
 
-    .gallery-image-1 {
-        max-width: 850px;
-        width: 80%;
-        max-height: 650px;
-        height: 80%;
-    }
-    .gallery-image-2 {
-        max-width: 900px;
-        width: 90%;
-        max-height: 900px;
-        height: 90%;
-    }
-    .gallery-image-3 {
-        max-width: 450px;
-        width: 60%;
-        max-height: 700px;
-        height: 60%;
-    }
+// Observe elements for animation
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.project-card, .skill-tag');
+    animateElements.forEach(el => observer.observe(el));
+});
 
-
-    .final-image-1 {
-        max-width: 850px;
-        width: 80%;
-        max-height: 650px;
-        height: 80%;
-    }
-    .final-image-2 {
-        max-width: 900px;
-        width: 90%;
-        max-height: 900px;
-        height: 90%;
-    }
-    .final-image-3 {
-        max-width: 450px;
-        width: 60%;
-        max-height: 700px;
-        height: 60%;
-    }
-
-    
-    .gallery-prev,
-    .gallery-next {
-        background: var(--slate-800, #222);
-        color: var(--foreground, #fff);
-        border: none;
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: background 0.2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .gallery-prev:hover,
-    .gallery-next:hover {
-        background: var(--primary, #007bff);
-        color: #fff;
-    }
-    .gallery-counter {
-        text-align: center;
-        margin-top: 0.5rem;
-        color: var(--foreground, #fff);
-        font-size: 1rem;
-    }
-`;
-
-document.head.appendChild(style);
+// ========================================
+// PROJECT DETAIL PAGE FUNCTIONS
+// ========================================
 
 // Gallery functionality for project detail pages
-let currentGalleryIndex = 0;
-
-function changeGalleryImage(direction) {
-    const galleryImages = document.querySelectorAll('.gallery-image');
+function initGallery() {
+    const galleryContainer = document.querySelector('.gallery-images');
+    const prevBtn = document.querySelector('.gallery-prev');
+    const nextBtn = document.querySelector('.gallery-next');
     const indicators = document.querySelectorAll('.indicator');
     
-    if (galleryImages.length === 0) return;
+    if (!galleryContainer) return;
     
-    // Remove active class from current image and indicator
-    galleryImages[currentGalleryIndex].classList.remove('active');
-    if (indicators[currentGalleryIndex]) {
-        indicators[currentGalleryIndex].classList.remove('active');
+    const images = galleryContainer.querySelectorAll('.gallery-image');
+    let currentIndex = 0;
+    
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+        
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+        
+        currentIndex = index;
     }
     
-    // Calculate new index
-    currentGalleryIndex += direction;
-    
-    if (currentGalleryIndex >= galleryImages.length) {
-        currentGalleryIndex = 0;
-    } else if (currentGalleryIndex < 0) {
-        currentGalleryIndex = galleryImages.length - 1;
+    function nextImage() {
+        const newIndex = (currentIndex + 1) % images.length;
+        showImage(newIndex);
     }
     
-    // Add active class to new image and indicator
-    galleryImages[currentGalleryIndex].classList.add('active');
-    if (indicators[currentGalleryIndex]) {
-        indicators[currentGalleryIndex].classList.add('active');
-    }
-}
-
-function currentGalleryImage(index) {
-    const galleryImages = document.querySelectorAll('.gallery-image');
-    const indicators = document.querySelectorAll('.indicator');
-    
-    if (galleryImages.length === 0 || index < 1 || index > galleryImages.length) return;
-    
-    // Remove active class from current image and indicator
-    galleryImages[currentGalleryIndex].classList.remove('active');
-    if (indicators[currentGalleryIndex]) {
-        indicators[currentGalleryIndex].classList.remove('active');
+    function prevImage() {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(newIndex);
     }
     
-    // Set new index (convert from 1-based to 0-based)
-    currentGalleryIndex = index - 1;
+    // Event listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextImage);
+    if (prevBtn) prevBtn.addEventListener('click', prevImage);
     
-    // Add active class to new image and indicator
-    galleryImages[currentGalleryIndex].classList.add('active');
-    if (indicators[currentGalleryIndex]) {
-        indicators[currentGalleryIndex].classList.add('active');
-    }
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showImage(index));
+    });
+    
+    // Auto-advance gallery (optional)
+    setInterval(nextImage, 5000);
+    
+    // Initialize first image
+    showImage(0);
 }
 
 // Initialize gallery on page load
+document.addEventListener('DOMContentLoaded', initGallery);
+
+// Back to projects functionality
+function goBackToProjects() {
+    window.location.href = 'index.html#projects';
+}
+
+// Add this to your project detail pages
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if we're on a project detail page
-    const galleryImages = document.querySelectorAll('.gallery-image');
-    if (galleryImages.length > 0) {
-        currentGalleryIndex = 0;
-        
-        // Hide navigation buttons and indicators if only one image
-        if (galleryImages.length <= 1) {
-            const prevBtn = document.querySelector('.gallery-prev');
-            const nextBtn = document.querySelector('.gallery-next');
-            const indicators = document.querySelector('.gallery-indicators');
-            
-            if (prevBtn) prevBtn.style.display = 'none';
-            if (nextBtn) nextBtn.style.display = 'none';
-            if (indicators) indicators.style.display = 'none';
-        }
+    const backBtn = document.querySelector('.back-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', goBackToProjects);
     }
 });
