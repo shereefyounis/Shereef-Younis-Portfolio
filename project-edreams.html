@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDreams Wireframe - Shereef Younis Portfolio</title>
+    <meta name="description" content="eDreams Wireframe project - Information Design & Usability course project creating wireframes for travel booking platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo / My name -->
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                
+                <!-- Nav menu / Buttons -->
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Buttons -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="back-navigation">
+                <button onclick="window.location.href='index.html#projects'" class="btn btn-outline">
+                    ← Back to Projects
+                </button>
+            </div>
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <div class="project-logo">
+                    <img src="Logos/eDreams Logo.png" alt="eDreams Logo" class="project-logo-img">
+                </div>
+                <div class="project-title-section">
+                    <h1>eDreams Wireframe</h1>
+                    <p class="project-subtitle">Information Design & Usability</p>
+                </div>
+            </div>
+
+            <!-- Project Gallery - Process Images -->
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-images" id="galleryImages">
+                        <img src="Projects/eDreams screenshot 1.png" alt="eDreams Wireframe Process 1" class="gallery-image active">
+                        <img src="Projects/eDreams screenshot 2.png" alt="eDreams Wireframe Process 2" class="gallery-image">
+                        <img src="Projects/eDreams screenshot 3.png" alt="eDreams Wireframe Process 3" class="gallery-image">
+                        <img src="Projects/eDreams screenshot 4.png" alt="eDreams Wireframe Process 4" class="gallery-image">
+                    </div>
+                    <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)" aria-label="Next image">›</button>
+                    <div class="gallery-indicators">
+                        <span class="indicator active" onclick="currentGalleryImage(1)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(2)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(3)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(4)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Design Section -->
+            <div class="final-design-section">
+                <h2>Final Design</h2>
+                <div class="final-image-container">
+                    <img src="Projects/eDreams screenshot 5.png" alt="eDreams Final Wireframe" class="final-image">
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
+                <div class="project-main">
+                    <!-- Project Overview -->
+                    <div class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>A project done in my Information Design & Usability course (GIT 340), based on existing website "eDreams", to show the process of creating wireframes and transition to a final frame.</p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <div class="content-text">
+                            <p>Users sometimes need more options after signing in successfully, such as a quick choice to continue or access settings to make changes if needed. Providing users with more freedom and easier access helps them have a smoother experience, as a lack of access could deter them from using the site.</p>
+                            <p>Try creating a wireframe that illustrates this scenario based on the travel website eDreams. With multiple types of wireframes, choose one and bring it to life with text, colors, and more to showcase it.</p>
+                        </div>
+                    </div>
+
+                    <!-- About This Project -->
+                    <div class="content-section">
+                        <h2>About This Project</h2>
+                        <div class="content-text">
+                            <p>The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.</p>
+                            <p>The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.</p>
+                            <p>The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.</p>
+                            <p>What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="content-section">
+                        <h2>Challenges</h2>
+                        <p>The main challenge was to effectively analyze the existing eDreams website and identify areas for improvement while creating wireframes that enhance user experience and usability. Ensuring that the wireframes were user-friendly and functional, while also trying to apply the principles of information design and usability, was a significant challenge I faced during this project.</p>
+                    </div>
+
+                    <!-- Project Links -->
+                    <div class="content-section">
+                        <h2>Project Links</h2>
+                        <div class="project-links">
+                            <a href="https://www.edreams.net/" target="_blank" class="btn btn-primary">View Original Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Sidebar -->
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <strong>Course:</strong>
+                            <span>Information Design & Usability (GIT 340)</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Software:</strong>
+                            <span>Figma</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Timeline:</strong>
+                            <span>2 Weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Status:</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Navigation to Other Projects -->
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-fangamer.html" class="project-nav-link">
+                                <img src="Logos/Fangamer Logo.png" alt="Fangamer Logo">
+                                <span>Fangamer Wireframe</span>
+                            </a>
+                            <a href="project-jones-soda.html" class="project-nav-link">
+                                <img src="Logos/Jones Soda Logo.png" alt="Jones Soda Logo">
+                                <span>Jones Soda Poster</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="footer-text">
+            © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

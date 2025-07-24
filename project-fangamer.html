@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fangamer Wireframe - Shereef Younis Portfolio</title>
+    <meta name="description" content="Fangamer Wireframe project - A project testing User Interface design and prototyping skills using Adobe XD.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo / My name -->
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                
+                <!-- Nav menu / Buttons -->
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Buttons -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="back-navigation">
+                <button onclick="window.location.href='index.html#projects'" class="btn btn-outline">
+                    ← Back to Projects
+                </button>
+            </div>
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <div class="project-logo">
+                    <img src="Logos/Fangamer Logo.png" alt="Fangamer Logo" class="project-logo-img">
+                </div>
+                <div class="project-title-section">
+                    <h1>Fangamer Wireframe</h1>
+                    <p class="project-subtitle">User Interface Design & Prototyping</p>
+                </div>
+            </div>
+
+            <!-- Project Gallery -->
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-images" id="galleryImages">
+                        <img src="Projects/Fangamer screenshot 1.png" alt="Fangamer Wireframe Screenshot 1" class="gallery-image active">
+                        <img src="Projects/Fangamer screenshot 2.png" alt="Fangamer Wireframe Screenshot 2" class="gallery-image">
+                        <img src="Projects/Fangamer screenshot 3.png" alt="Fangamer Wireframe Screenshot 3" class="gallery-image">
+                        <img src="Projects/Fangamer screenshot 4.png" alt="Fangamer Wireframe Screenshot 4" class="gallery-image">
+                    </div>
+                    <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)" aria-label="Next image">›</button>
+                    <div class="gallery-indicators">
+                        <span class="indicator active" onclick="currentGalleryImage(1)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(2)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(3)"></span>
+                        <span class="indicator" onclick="currentGalleryImage(4)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
+                <div class="project-main">
+                    <!-- Project Overview -->
+                    <div class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.</p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won't be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.</p>
+                    </div>
+
+                    <!-- About This Project -->
+                    <div class="content-section">
+                        <h2>About This Project</h2>
+                        <div class="content-text">
+                            <p>The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.</p>
+                            <p>The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.</p>
+                            <p>The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.</p>
+                            <p>What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="content-section">
+                        <h2>Challenges</h2>
+                        <p>The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that its in the beginning stages so it won't be perfect.</p>
+                    </div>
+
+                    <!-- Project Links -->
+                    <div class="content-section">
+                        <h2>Project Links</h2>
+                        <div class="project-links">
+                            <a href="https://www.fangamer.com/" target="_blank" class="btn btn-primary">View Original Site</a>
+                            <a href="https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen" target="_blank" class="btn btn-outline">View Prototype</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Sidebar -->
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <strong>Course:</strong>
+                            <span>Digital Publishing (GIT 303)</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Software:</strong>
+                            <span>Adobe XD</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Timeline:</strong>
+                            <span>2 Weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Status:</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Navigation to Other Projects -->
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-edreams.html" class="project-nav-link">
+                                <img src="Logos/eDreams Logo.png" alt="eDreams Logo">
+                                <span>eDreams Wireframe</span>
+                            </a>
+                            <a href="project-jones-soda.html" class="project-nav-link">
+                                <img src="Logos/Jones Soda Logo.png" alt="Jones Soda Logo">
+                                <span>Jones Soda Poster</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="footer-text">
+            © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

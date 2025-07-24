@@ -69,8 +69,6 @@ const projects = [
 
 // DOM Elements
 const projectsGrid = document.getElementById('projectsGrid');
-const projectModal = document.getElementById('projectModal');
-const modalBody = document.getElementById('modalBody');
 const mobileMenu = document.getElementById('mobileMenu');
 
 // Initialize the website
@@ -95,7 +93,20 @@ function renderProjects() {
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card fade-in-up';
-    card.onclick = () => openProjectModal(project);
+    
+    // Get the project page URL based on project ID
+    const projectPages = {
+        1: 'project-fangamer.html',
+        2: 'project-edreams.html',
+        3: 'project-jones-soda.html'
+    };
+    
+    const projectUrl = projectPages[project.id] || '#';
+    
+    // Add click handler
+    card.onclick = () => {
+        window.location.href = projectUrl;
+    };
     
     card.innerHTML = `
         <img 
@@ -109,103 +120,13 @@ function createProjectCard(project) {
             
             <div class="project-link">
                 <span class="project-link-text">
-                    View Details →
+                    View Project →
                 </span>
             </div>
         </div>
     `;
     
     return card;
-}
-
-// Open project modal & Information
-function openProjectModal(project) {
-    if (!projectModal || !modalBody) return;
-
-    projectModal.querySelector('.modal-header').innerHTML = `
-    <span class="modal-title">${project.title}</span>
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    `;
-    
-    modalBody.innerHTML = `
-       <div class="modal-section">
-            <div class="modal-info">
-                ${project.client ? `
-                    <div class="info-item">
-                        <div class="info-label">Client</div>
-                        <div class="info-value">${project.client}</div>
-                    </div>
-                ` : ''}
-                ${project.course ? `
-                    <div class="info-item">
-                        <div class="info-label">Course</div>
-                        <div class="info-value">${project.course}</div>
-                    </div>
-                ` : ''}
-                ${project.timeline ? `
-                    <div class="info-item">
-                        <div class="info-label">Timeline</div>
-                        <div class="info-value">${project.timeline}</div>
-                    </div>
-                ` : ''}
-                ${project.program ? `
-                    <div class="info-item">
-                        <div class="info-label">Program</div>
-                        <div class="info-value">${project.program}</div>
-                    </div>
-                ` : ''}
-                ${project.status ? `
-                    <div class="info-item">
-                        <div class="info-label">Status</div>
-                        <div class="info-value">${project.status}</div>
-                    </div>
-                ` : ''}
-            </div>
-        </div>
-
-        <div class="modal-section">
-            <div class="modal-section-title">Project Problem:</div>
-            <div class="modal-text">${project.problem}</div>
-        </div>
-        
-        <div class="modal-section">
-            <div class="modal-section-title">Project Description:</div>
-            <div class="modal-text">${project.about}</div>
-        </div>
-
-        ${project.challenges ? `
-            <div class="modal-section">
-                <div class="modal-section-title"> Challenges:</div>
-                <div class="modal-text">${project.challenges}</div>
-            </div>
-        ` : ''}
-
-        <div class="modal-section">
-            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                ${project.OriginalUrl ? `
-                    <a href="${project.OriginalUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Original Site
-                    </a>
-                ` : ''}
-                ${project.PrototypeUrl ? `
-                    <a href="${project.PrototypeUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        Prototype
-                    </a>
-                ` : ''}
-            </div>
-        </div>
-    `;
-    
-    projectModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-// Close modal
-function closeModal() {
-    if (!projectModal) return;
-    
-    projectModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
 }
 
 
@@ -331,19 +252,9 @@ function showNotification(message, type = 'info') {
 
 // Setup event listeners
 function setupEventListeners() {
-    // Close modal when clicking outside
-    if (projectModal) {
-        projectModal.addEventListener('click', function(event) {
-            if (event.target === projectModal) {
-                closeModal();
-            }
-        });
-    }
-    
     // Handle escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-            closeModal();
             closeMobileMenu();
         }
     });
@@ -489,3 +400,76 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+// Gallery functionality for project detail pages
+let currentGalleryIndex = 0;
+
+function changeGalleryImage(direction) {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (galleryImages.length === 0) return;
+    
+    // Remove active class from current image and indicator
+    galleryImages[currentGalleryIndex].classList.remove('active');
+    if (indicators[currentGalleryIndex]) {
+        indicators[currentGalleryIndex].classList.remove('active');
+    }
+    
+    // Calculate new index
+    currentGalleryIndex += direction;
+    
+    if (currentGalleryIndex >= galleryImages.length) {
+        currentGalleryIndex = 0;
+    } else if (currentGalleryIndex < 0) {
+        currentGalleryIndex = galleryImages.length - 1;
+    }
+    
+    // Add active class to new image and indicator
+    galleryImages[currentGalleryIndex].classList.add('active');
+    if (indicators[currentGalleryIndex]) {
+        indicators[currentGalleryIndex].classList.add('active');
+    }
+}
+
+function currentGalleryImage(index) {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (galleryImages.length === 0 || index < 1 || index > galleryImages.length) return;
+    
+    // Remove active class from current image and indicator
+    galleryImages[currentGalleryIndex].classList.remove('active');
+    if (indicators[currentGalleryIndex]) {
+        indicators[currentGalleryIndex].classList.remove('active');
+    }
+    
+    // Set new index (convert from 1-based to 0-based)
+    currentGalleryIndex = index - 1;
+    
+    // Add active class to new image and indicator
+    galleryImages[currentGalleryIndex].classList.add('active');
+    if (indicators[currentGalleryIndex]) {
+        indicators[currentGalleryIndex].classList.add('active');
+    }
+}
+
+// Initialize gallery on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on a project detail page
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    if (galleryImages.length > 0) {
+        currentGalleryIndex = 0;
+        
+        // Hide navigation buttons and indicators if only one image
+        if (galleryImages.length <= 1) {
+            const prevBtn = document.querySelector('.gallery-prev');
+            const nextBtn = document.querySelector('.gallery-next');
+            const indicators = document.querySelector('.gallery-indicators');
+            
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (indicators) indicators.style.display = 'none';
+        }
+    }
+});

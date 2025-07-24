@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jones Soda Poster Project - Shereef Younis Portfolio</title>
+    <meta name="description" content="Jones Soda Poster Project - A poster design project for Jones Soda showcasing graphic design skills.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo / My name -->
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                
+                <!-- Nav menu / Buttons -->
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Buttons -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail-section">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="back-navigation">
+                <button onclick="window.location.href='index.html#projects'" class="btn btn-outline">
+                    ← Back to Projects
+                </button>
+            </div>
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <div class="project-logo">
+                    <img src="Logos/Jones Soda Logo.png" alt="Jones Soda Logo" class="project-logo-img">
+                </div>
+                <div class="project-title-section">
+                    <h1>Jones Soda Poster</h1>
+                    <p class="project-subtitle">Digital Illustration in Publishing</p>
+                </div>
+            </div>
+
+            <!-- Project Image -->
+            <div class="project-single-image">
+                <div class="single-image-container">
+                    <img src="Projects/Jones Soda Poster Project.png" alt="Jones Soda Poster Design" class="single-project-image">
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
+                <div class="project-main">
+                    <!-- Project Overview -->
+                    <div class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.</p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>Customers typically have limited options when it comes to soda brands, offering a narrow and unappealing selection, which attracts fewer consumers interested in trying new, unique flavors that differ from other brands. Having a wider selection would attract more consumers to the variety of their tasting palate than just a narrow selection.</p>
+                    </div>
+
+                    <!-- About This Project -->
+                    <div class="content-section">
+                        <h2>About This Project</h2>
+                        <div class="content-text">
+                            <p>The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.</p>
+                            <p>I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.</p>
+                            <p>The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.</p>
+                            <p>What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.</p>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="content-section">
+                        <h2>Challenges</h2>
+                        <p>The main challenge was to effectively capture the essence of the brand while applying the skills learned in the course to speak out to the audience. Experimenting with different design elements and ensuring that the poster was visually appealing and aligned with the brand's identity was one of the challenges I faced during this project.</p>
+                    </div>
+
+                    <!-- Project Links -->
+                    <div class="content-section">
+                        <h2>Project Links</h2>
+                        <div class="project-links">
+                            <a href="https://www.jonessoda.com/" target="_blank" class="btn btn-primary">View Original Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Sidebar -->
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <strong>Course:</strong>
+                            <span>Digital Illustration in Publishing (GIT 230)</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Software:</strong>
+                            <span>Adobe Photoshop</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Timeline:</strong>
+                            <span>2 Weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Status:</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Navigation to Other Projects -->
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-fangamer.html" class="project-nav-link">
+                                <img src="Logos/Fangamer Logo.png" alt="Fangamer Logo">
+                                <span>Fangamer Wireframe</span>
+                            </a>
+                            <a href="project-edreams.html" class="project-nav-link">
+                                <img src="Logos/eDreams Logo.png" alt="eDreams Logo">
+                                <span>eDreams Wireframe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="footer-text">
+            © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
