@@ -128,10 +128,7 @@ function openProjectModal(project) {
     `;
     
     modalBody.innerHTML = `
-       <!--<div class="modal-description">${project.description}</div>-->
-
        <div class="modal-section">
-            <!--<div class="modal-section-title">Project Information:</div>-->
             <div class="modal-info">
                 ${project.client ? `
                     <div class="info-item">
@@ -166,46 +163,15 @@ function openProjectModal(project) {
             </div>
         </div>
 
-
-
-       ${project.finalImages && project.finalImages.length > 0 ? `
-            <div class="modal-section">
-                <div class="gallery-carousel">
-                    ${project.finalImages.length > 1 ? `
-                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
-                    ` : ''}
-                    <img 
-                        src="${project.finalImages[0]}"
-                        alt="${project.title} screenshot 1"
-                        class="final-image final-image-${project.id}"
-                        id="finalImages"
-                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
-                    >
-                    ${project.finalImages.length > 1 ? `
-                        <button class="gallery-next" aria-label="Next image">&gt;</button>
-                    ` : ''}
-                </div>
-                ${project.finalImages.length > 1 ? `
-                    <div class="gallery-counter" id="finalCounter">1 / ${project.finalImages.length}</div>
-                ` : ''}
-            </div>
-        ` : ''}
-
-
-
         <div class="modal-section">
             <div class="modal-section-title">Project Problem:</div>
             <div class="modal-text">${project.problem}</div>
         </div>
-
-
         
         <div class="modal-section">
             <div class="modal-section-title">Project Description:</div>
             <div class="modal-text">${project.about}</div>
         </div>
-
-
 
         ${project.challenges ? `
             <div class="modal-section">
@@ -213,50 +179,16 @@ function openProjectModal(project) {
                 <div class="modal-text">${project.challenges}</div>
             </div>
         ` : ''}
-        
-
-        
-        ${project.galleryImages && project.galleryImages.length > 0 ? `
-            <div class="modal-section">
-                <div class="modal-section-title">Project Gallery:</div>
-                <div class="gallery-carousel">
-                    ${project.galleryImages.length > 1 ? `
-                        <button class="gallery-prev" aria-label="Previous image">&lt;</button>
-                    ` : ''}
-                    <img 
-                        src="${project.galleryImages[0]}"
-                        alt="${project.title} screenshot 1"
-                        class="gallery-image gallery-image-${project.id}"
-                        id="galleryImage"
-                        style="border-radius: 0.5rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); transition: transform 0.2s ease; display: block; margin: 0 auto; width: auto; height: auto;"
-                    >
-                    ${project.galleryImages.length > 1 ? `
-                        <button class="gallery-next" aria-label="Next image">&gt;</button>
-                    ` : ''} 
-                </div>
-                ${project.galleryImages.length > 1 ? `
-                <div class="gallery-counter" id="galleryCounter">1 / ${project.galleryImages.length}</div>
-                ` : ''}
-            </div>
-        ` : ''}
-
-
 
         <div class="modal-section">
             <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                 ${project.OriginalUrl ? `
                     <a href="${project.OriginalUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
                         Original Site
                     </a>
                 ` : ''}
                 ${project.PrototypeUrl ? `
                     <a href="${project.PrototypeUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
                         Prototype
                     </a>
                 ` : ''}
@@ -266,65 +198,7 @@ function openProjectModal(project) {
     
     projectModal.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-     // Carousel functionality for final images
-    if (project.finalImages && project.finalImages.length > 1) {
-        let finalIndex = 0;
-        const finalImgs = project.finalImages;
-        const finalImage = document.getElementById('finalImages');
-        const finalCounter = document.getElementById('finalCounter');
-        const finalSection = modalBody.querySelectorAll('.modal-section')[1]; // Adjust index if needed
-        const finalPrevBtn = finalSection ? finalSection.querySelector('.gallery-prev') : null;
-        const finalNextBtn = finalSection ? finalSection.querySelector('.gallery-next') : null;
-
-        function updateFinalGallery() {
-            finalImage.src = finalImgs[finalIndex];
-            finalImage.alt = `${project.title} screenshot ${finalIndex + 1}`;
-            if (finalCounter) {
-                finalCounter.textContent = `${finalIndex + 1} / ${finalImgs.length}`;
-            }
-        }
-
-        if (finalPrevBtn) {
-            finalPrevBtn.onclick = () => {
-                finalIndex = (finalIndex - 1 + finalImgs.length) % finalImgs.length;
-                updateFinalGallery();
-            };
-        }
-        if (finalNextBtn) {
-            finalNextBtn.onclick = () => {
-                finalIndex = (finalIndex + 1) % finalImgs.length;
-                updateFinalGallery();
-            };
-        }
-    }
-    
-    // Carousel functionality for gallery images
-    if (project.galleryImages && project.galleryImages.length > 0) {
-        let currentIndex = 0;
-        const images = project.galleryImages;
-        const galleryImage = document.getElementById('galleryImage');
-        const galleryCounter = document.getElementById('galleryCounter');
-        const prevBtn = modalBody.querySelector('.gallery-prev');
-        const nextBtn = modalBody.querySelector('.gallery-next');
-
-        function updateGallery() {
-            galleryImage.src = images[currentIndex];
-            galleryImage.alt = `${project.title} screenshot ${currentIndex + 1}`;
-            galleryCounter.textContent = `${currentIndex + 1} / ${images.length}`;
-        }
-
-        prevBtn.onclick = () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateGallery();
-        };
-        nextBtn.onclick = () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateGallery();
-        };
-    }
 }
-
 
 // Close modal
 function closeModal() {
@@ -333,6 +207,7 @@ function closeModal() {
     projectModal.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+
 
 // Smooth scroll to section
 function scrollToSection(sectionId) {
@@ -610,26 +485,6 @@ style.textContent = `
         margin-top: 0.5rem;
         color: var(--foreground, #fff);
         font-size: 1rem;
-    }
-    
-    @media (max-width: 640px) {
-        .modal-content {
-            margin: 1rem;
-            max-height: calc(100vh - 2rem);
-        }
-        
-        .modal-body {
-            padding: 1rem;
-        }
-        
-        .hero-buttons {
-            flex-direction: column;
-            width: 100%;
-        }
-        
-        .hero-buttons .btn {
-            width: 100%;
-        }
     }
 `;
 
