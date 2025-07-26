@@ -462,6 +462,20 @@ html {
   font-weight: 700;
   color: var(--foreground);
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 @media (min-width: 1024px) {
@@ -474,7 +488,7 @@ html {
   font-size: 1.25rem;
   color: var(--slate-300);
   max-width: 48rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
 
