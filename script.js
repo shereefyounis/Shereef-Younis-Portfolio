@@ -149,12 +149,10 @@ function scrollToSection(sectionId) {
 // Toggle mobile menu
 function toggleMobileMenu() {
     console.log('toggleMobileMenu called');
-    alert('Toggle function called!'); // Temporary debug alert
     console.log('mobileMenu element:', mobileMenu);
     
     if (!mobileMenu) {
         console.log('mobileMenu not found!');
-        alert('Mobile menu element not found!');
         return;
     }
     
