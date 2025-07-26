@@ -73,12 +73,16 @@
 
             <!-- Project Header -->
             <div class="project-header">
-                <div class="project-logo">
-                    <img src="Logos/eDreams Logo.png" alt="eDreams Logo" class="project-logo-img">
-                </div>
                 <div class="project-title-section">
                     <h1>eDreams Wireframe</h1>
                     <p class="project-subtitle">Information Design & Usability</p>
+                </div>
+            </div>
+
+            <!-- Project Links -->
+            <div class="project-links-header">
+                <div class="project-links">
+                    <a href="https://www.edreams.net/" target="_blank" class="btn btn-primary">View Original Site</a>
                 </div>
             </div>
 
@@ -93,6 +97,9 @@
                         <img src="Projects/eDreams screenshot 3.png" alt="eDreams Wireframe Process 3" class="gallery-image">
                         <img src="Projects/eDreams screenshot 4.png" alt="eDreams Wireframe Process 4" class="gallery-image">
                     </div>
+                    <!-- Invisible navigation zones -->
+                    <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
+                    <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
                     <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)" aria-label="Previous image">‹</button>
                     <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)" aria-label="Next image">›</button>
                     <div class="gallery-indicators">
@@ -150,14 +157,6 @@
                         <h2>Challenges</h2>
                         <p>The main challenge was to effectively analyze the existing eDreams website and identify areas for improvement while creating wireframes that enhance user experience and usability. Ensuring that the wireframes were user-friendly and functional, while also trying to apply the principles of information design and usability, was a significant challenge I faced during this project.</p>
                     </section>
-
-                    <!-- Project Links -->
-                    <section class="content-section">
-                        <h2>Project Links</h2>
-                        <div class="project-links">
-                            <a href="https://www.edreams.net/" target="_blank" class="btn btn-primary">View Original Site</a>
-                        </div>
-                    </section>
                 </div>
 
                 <!-- ========================================
@@ -211,6 +210,16 @@
         <p class="footer-text">
             © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
         </p>
+    </div>
+
+    <!-- ========================================
+         IMAGE MODAL
+    ========================================= -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+        </div>
     </div>
 
     <!-- ========================================

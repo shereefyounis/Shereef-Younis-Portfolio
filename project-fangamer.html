@@ -71,12 +71,17 @@
 
             <!-- Project Header -->
             <div class="project-header">
-                <div class="project-logo">
-                    <img src="Logos/Fangamer Logo.png" alt="Fangamer Logo" class="project-logo-img">
-                </div>
                 <div class="project-title-section">
                     <h1>Fangamer Wireframe</h1>
                     <p class="project-subtitle">User Interface Design & Prototyping</p>
+                </div>
+            </div>
+
+            <!-- Project Links -->
+            <div class="project-links-header">
+                <div class="project-links">
+                    <a href="https://www.fangamer.com/" target="_blank" class="btn btn-primary">View Original Site</a>
+                    <a href="https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen" target="_blank" class="btn btn-outline">View Prototype</a>
                 </div>
             </div>
 
@@ -89,6 +94,9 @@
                         <img src="Projects/Fangamer screenshot 3.png" alt="Fangamer Wireframe Screenshot 3" class="gallery-image">
                         <img src="Projects/Fangamer screenshot 4.png" alt="Fangamer Wireframe Screenshot 4" class="gallery-image">
                     </div>
+                    <!-- Invisible navigation zones -->
+                    <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
+                    <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
                     <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)" aria-label="Previous image">‹</button>
                     <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)" aria-label="Next image">›</button>
                     <div class="gallery-indicators">
@@ -131,15 +139,6 @@
                         <h2>Challenges</h2>
                         <p>The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that it's in the beginning stages so it won't be perfect.</p>
                     </section>
-
-                    <!-- Project Links -->
-                    <div class="content-section">
-                        <h2>Project Links</h2>
-                        <div class="project-links">
-                            <a href="https://www.fangamer.com/" target="_blank" class="btn btn-primary">View Original Site</a>
-                            <a href="https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen" target="_blank" class="btn btn-outline">View Prototype</a>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Project Sidebar -->
@@ -188,6 +187,14 @@
         <p class="footer-text">
             © Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com
         </p>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+        </div>
     </div>
 
     <script src="script.js"></script>
