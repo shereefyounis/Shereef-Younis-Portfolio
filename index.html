@@ -39,7 +39,7 @@
                 
                 <!-- Mobile Menu Buttons -->
                 <div class="mobile-menu-btn">
-                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <button class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
@@ -50,10 +50,10 @@
             <!-- Mobile menu -->
             <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-menu-content">
-                    <button onclick="scrollToSection('home'); closeMobileMenu()" class="mobile-link">Home</button>
-                    <button onclick="scrollToSection('about'); closeMobileMenu()" class="mobile-link">About</button>
-                    <button onclick="scrollToSection('projects'); closeMobileMenu()" class="mobile-link">Projects</button>
-                    <button onclick="scrollToSection('contact'); closeMobileMenu()" class="mobile-link">Contact</button>
+                    <button onclick="scrollToSection('home'); closeMobileMenu();" class="mobile-link" data-href="#home">Home</button>
+                    <button onclick="scrollToSection('about'); closeMobileMenu();" class="mobile-link" data-href="#about">About</button>
+                    <button onclick="scrollToSection('projects'); closeMobileMenu();" class="mobile-link" data-href="#projects">Projects</button>
+                    <button onclick="scrollToSection('contact'); closeMobileMenu();" class="mobile-link" data-href="#contact">Contact</button>
                 </div>
             </div>
         </nav>

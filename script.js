@@ -148,14 +148,26 @@ function scrollToSection(sectionId) {
 
 // Toggle mobile menu
 function toggleMobileMenu() {
-    if (!mobileMenu) return;
+    console.log('toggleMobileMenu called');
+    alert('Toggle function called!'); // Temporary debug alert
+    console.log('mobileMenu element:', mobileMenu);
+    
+    if (!mobileMenu) {
+        console.log('mobileMenu not found!');
+        alert('Mobile menu element not found!');
+        return;
+    }
     
     mobileMenu.classList.toggle('active');
+    console.log('Mobile menu classes after toggle:', mobileMenu.className);
     
     // Toggle hamburger animation
     const mobileBtn = document.getElementById('mobileMenuBtn');
     if (mobileBtn) {
         mobileBtn.classList.toggle('active');
+        console.log('Mobile button classes after toggle:', mobileBtn.className);
+    } else {
+        console.log('mobileMenuBtn not found!');
     }
 }
 
@@ -174,8 +186,12 @@ function closeMobileMenu() {
 
 // Add event listeners for navigation
 function setupEventListeners() {
+    console.log('Setting up event listeners...');
+    
     // Navigation link handlers
     const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
+    console.log('Found nav links:', navLinks.length);
+    
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             const href = this.getAttribute('data-href');
@@ -189,8 +205,20 @@ function setupEventListeners() {
 
     // Mobile menu button
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    console.log('Mobile menu button found:', mobileMenuBtn);
+    
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        // Remove any existing listeners first
+        mobileMenuBtn.removeEventListener('click', toggleMobileMenu);
+        // Add the event listener
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Mobile menu button clicked!');
+            toggleMobileMenu();
+        });
+        console.log('Mobile menu button event listener added');
+    } else {
+        console.error('Mobile menu button not found!');
     }
 
     // Contact form handler
