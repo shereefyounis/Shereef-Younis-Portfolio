@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
@@ -30,10 +30,10 @@
                 <!-- Nav menu / Buttons -->
                 <div class="nav-menu">
                     <div class="nav-links">
-                        <button onclick="window.location.href='index.html#home'" class="nav-link">Home</button>
-                        <button onclick="window.location.href='index.html#about'" class="nav-link">About</button>
-                        <button onclick="window.location.href='index.html#projects'" class="nav-link">Projects</button>
-                        <button onclick="window.location.href='index.html#contact'" class="nav-link">Contact</button>
+                        <button onclick="window.location.href='../index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='../index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='../index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='../index.html#contact'" class="nav-link">Contact</button>
                     </div>
                 </div>
                 
@@ -50,10 +50,10 @@
             <!-- Mobile menu -->
             <div class="mobile-menu" id="mobileMenu">
                 <div class="mobile-menu-content">
-                    <button onclick="window.location.href='index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
-                    <button onclick="window.location.href='index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
-                    <button onclick="window.location.href='index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
-                    <button onclick="window.location.href='index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                    <button onclick="window.location.href='../index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='../index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='../index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='../index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
                 </div>
             </div>
         </nav>
@@ -64,7 +64,7 @@
         <div class="container">
             <!-- Back Button -->
             <div class="back-navigation">
-                <button onclick="window.location.href='index.html#projects'" class="btn btn-outline">
+                <button onclick="window.location.href='../index.html#projects'" class="btn btn-outline">
                     ← Back to Projects
                 </button>
             </div>
@@ -73,7 +73,7 @@
             <div class="project-header">
                 <div class="project-title-section">
                     <h1>Fangamer Wireframe</h1>
-                    <p class="project-subtitle">User Interface Design & Prototyping</p>
+                    <p class="project-subtitle">Gaming Merchandise For All Fans</p>
                 </div>
             </div>
 
@@ -89,21 +89,21 @@
             <div class="project-gallery">
                 <div class="gallery-container">
                     <div class="gallery-images" id="galleryImages">
-                        <img src="Projects/Fangamer screenshot 1.png" alt="Fangamer Wireframe Screenshot 1" class="gallery-image active">
-                        <img src="Projects/Fangamer screenshot 2.png" alt="Fangamer Wireframe Screenshot 2" class="gallery-image">
-                        <img src="Projects/Fangamer screenshot 3.png" alt="Fangamer Wireframe Screenshot 3" class="gallery-image">
-                        <img src="Projects/Fangamer screenshot 4.png" alt="Fangamer Wireframe Screenshot 4" class="gallery-image">
+                        <img src="../Images/Projects/Fangamer/Fangamer screenshot 1.png" alt="Fangamer Wireframe Screenshot 1" class="gallery-image active">
+                        <img src="../Images/Projects/Fangamer/Fangamer screenshot 2.png" alt="Fangamer Wireframe Screenshot 2" class="gallery-image">
+                        <img src="../Images/Projects/Fangamer/Fangamer screenshot 3.png" alt="Fangamer Wireframe Screenshot 3" class="gallery-image">
+                        <img src="../Images/Projects/Fangamer/Fangamer screenshot 4.png" alt="Fangamer Wireframe Screenshot 4" class="gallery-image">
                     </div>
                     <!-- Invisible navigation zones -->
                     <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
                     <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
-                    <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)" aria-label="Previous image">‹</button>
-                    <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)" aria-label="Next image">›</button>
+                    <button class="gallery-btn gallery-prev" onclick="manualPrevImage()" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="manualNextImage()" aria-label="Next image">›</button>
                     <div class="gallery-indicators">
-                        <span class="indicator active" onclick="currentGalleryImage(1)"></span>
-                        <span class="indicator" onclick="currentGalleryImage(2)"></span>
-                        <span class="indicator" onclick="currentGalleryImage(3)"></span>
-                        <span class="indicator" onclick="currentGalleryImage(4)"></span>
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
                     </div>
                 </div>
             </div>
@@ -111,33 +111,39 @@
             <!-- Project Content -->
             <div class="project-content">
                 <div class="project-main">
-                    <!-- Project Overview -->
+                    <!-- Background -->
                     <section class="content-section">
-                        <h2>Project Overview</h2>
-                        <p>A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.</p>
+                        <h2>Background:</h2>
+                        <p>The clients are individuals interested in all kinds of video game merchandise, including shirts, plush toys, and more. 
+                        They enjoy browsing and purchasing items that catch their interest, mainly video game-related products. 
+                        Known for having diverse interests and engaging in various activities and jobs, they share a common passion for video games.</p>
                     </section>
 
                     <!-- Problem Statement -->
                     <section class="content-section">
-                        <h2>Problem Statement</h2>
-                        <p>Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won't be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.</p>
+                        <h2>Problem Statement:</h2>
+                        <p>People interested in gaming research and exploring various sites to find gaming merchandise often visit Fangamer. 
+                        The Fangamer website required some updates to enhance its user experience, making it easier for visitors to browse and potentially make a purchase. ​​​​​​</p>
                     </section>
 
-                    <!-- About This Project -->
+                    <!-- Process -->
                     <section class="content-section">
-                        <h2>About This Project</h2>
+                        <h2>Process:</h2>
                         <div class="content-text">
-                            <p>The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.</p>
-                            <p>The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.</p>
-                            <p>The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.</p>
-                            <p>What I have learned from this project is the importance of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the project stages.</p>
+                            <p>The research provided insights into the types of merchandise gaming sites that attract people interested in video games. 
+                            It also revealed how these sites organize their products, helping me understand which layouts are more appealing to display to customers. 
+                            This knowledge guided me in planning the site's layout, navigation, and other details, starting with a low-fidelity prototype that marked the initial phase. 
+                            The design included multiple pages to guide the customer's journey, from the home page to a congregation page for purchasing. 
+                            These visuals aimed not only to solve a problem but also to tell the story of the journey and enhance its presentation. ​​​​</p>
                         </div>
                     </section>
 
-                    <!-- Challenges -->
+                    <!-- Results -->
                     <section class="content-section">
-                        <h2>Challenges</h2>
-                        <p>The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that it's in the beginning stages so it won't be perfect.</p>
+                        <h2>Result:</h2>
+                        <p>The gaming community at Fangamer experienced a different layout from low fidelity, 
+                        which would provide better information, leading to improved navigation 
+                        and a more user-friendly experience for customers interested in gaming merchandise and more through Fangamer.</p>
                     </section>
                 </div>
 
@@ -146,20 +152,12 @@
                     <div class="sidebar-section">
                         <h3>Project Details</h3>
                         <div class="detail-item">
-                            <strong>Course:</strong>
-                            <span>Digital Publishing (GIT 303)</span>
-                        </div>
-                        <div class="detail-item">
                             <strong>Software:</strong>
                             <span>Adobe XD</span>
                         </div>
                         <div class="detail-item">
                             <strong>Timeline:</strong>
-                            <span>2 Weeks</span>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Status:</strong>
-                            <span>Completed</span>
+                            <span>1 Week</span>
                         </div>
                     </div>
 
@@ -168,12 +166,24 @@
                         <h3>Other Projects</h3>
                         <div class="project-nav-links">
                             <a href="project-edreams.html" class="project-nav-link">
-                                <img src="Logos/eDreams Logo.png" alt="eDreams Logo">
+                                <img src="../Images/Logos/eDreams Logo.png" alt="eDreams Logo">
                                 <span>eDreams Wireframe</span>
                             </a>
                             <a href="project-jones-soda.html" class="project-nav-link">
-                                <img src="Logos/Jones Soda Logo.png" alt="Jones Soda Logo">
+                                <img src="../Images/Logos/Jones Soda Logo.png" alt="Jones Soda Logo">
                                 <span>Jones Soda Poster</span>
+                            </a>
+                            <a href="project-wikipedia.html" class="project-nav-link">
+                                <img src="../Images/Logos/Wikipedia-logo.png" alt="Wikipedia Logo">
+                                <span>Wikipedia Wireframes</span>
+                            </a>
+                            <a href="project-sky.html" class="project-nav-link">
+                                <img src="../Images/Logos/Sky.png" alt="Sky Logo">
+                                <span>Sky: Children of the Light GIF</span>
+                            </a>
+                            <a href="project-css&html.html" class="project-nav-link">
+                                <img src="../Images/Logos/GitHub.png" alt="CSS & HTML Pages Logo">
+                                <span>CSS & HTML Pages</span>
                             </a>
                         </div>
                     </div>
@@ -197,6 +207,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

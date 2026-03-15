@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky: Children of the Light GIF - Shereef Younis Portfolio</title>
+    <meta name="description" content="Sky: Children of the Light GIF project that tested using Adobe After Effects to create a GIF.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='../index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='../index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='../index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='../index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='../index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='../index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='../index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='../index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="back-navigation">
+                <button onclick="window.location.href='../index.html#projects'" class="btn btn-outline">← Back to Projects</button>
+            </div>
+
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h1>Sky: Children of the Light GIF</h1>
+                    <p class="project-subtitle">More than above the Sky</p>
+                </div>
+            </div>
+
+            <div class="project-links-header">
+                <div class="project-links">
+                    <a href="https://www.thatskygame.com/" target="_blank" class="btn btn-primary">View Original Site</a>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-images" id="galleryImages" data-auto-advance="false">
+                        <video class="gallery-image active" controls muted playsinline preload="metadata" aria-label="Sky: Children of the Light animation 1">
+                            <source src="../Images/Projects/Sky/Sky Logo 1.mp4" type="video/mp4">
+                        </video>
+                        <video class="gallery-image" controls muted playsinline preload="metadata" aria-label="Sky: Children of the Light animation 2">
+                            <source src="../Images/Projects/Sky/Sky Logo 2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
+                    <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
+                    <button class="gallery-btn gallery-prev" onclick="manualPrevImage()" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="manualNextImage()" aria-label="Next image">›</button>
+                    <div class="gallery-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-main">
+                    <section class="content-section">
+                        <h2>Background</h2>
+                        <p>Sky: Children of the Light is a game that features beautiful visuals and an engaging storyline. The game has a unique art style that sets it apart from other games in the market.</p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>Create a visually appealing GIF that represents the essence of Sky: Children of the Light, capturing its unique art style and visuals using its logo.</p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Process</h2>
+                        <div class="content-text">
+                            <p>The process involved creating a series of animations with the Logo that captured the essence of Sky: Children of the Light. 
+                            The animations were then compiled into a single animation for sharing and showcasing.</p>
+                        </div>
+                    </section>
+                    <section class="content-section">
+                        <h2>Result</h2>
+                        <p>The result is a visually appealing GIF that represents the essence of Sky: Children of the Light, capturing its unique art style and visuals using its logo. 
+                        That also showcases the understanding of using the Adobe After Effects software to compile everything together.</p>
+                    </section>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><strong>Softwares:</strong><span>Adobe After Effects <br> Adobe Photoshop <br> Adobe Illustrator</span></div>
+                        <div class="detail-item"><strong>Timeline:</strong><span>1 Week</span></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-fangamer.html" class="project-nav-link"><img src="../Images/Logos/Fangamer Logo.png" alt="Fangamer Logo"><span>Fangamer Wireframe</span></a>
+                            <a href="project-edreams.html" class="project-nav-link"><img src="../Images/Logos/eDreams Logo.png" alt="eDreams Logo"><span>eDreams Wireframe</span></a>
+                            <a href="project-jones-soda.html" class="project-nav-link"><img src="../Images/Logos/Jones Soda Logo.png" alt="Jones Soda Logo"><span>Jones Soda Poster</span></a>
+                            <a href="project-wikipedia.html" class="project-nav-link"><img src="../Images/Logos/Wikipedia-logo.png" alt="Wikipedia Logo"><span>Wikipedia Wireframes</span></a>
+                            <a href="project-css&html.html" class="project-nav-link"><img src="../Images/Logos/GitHub.png" alt="CSS & HTML Pages Logo"><span>CSS & HTML Pages</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p class="footer-text">© Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com</p>
+    </div>
+
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,7 +1,13 @@
+/* By Shereef Younis */
+
+
+
 /* ========================================
    IMPORTS & FONTS
 ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
 
 /* ========================================
    CSS VARIABLES & THEMING
@@ -20,6 +26,7 @@
   --primary-foreground: hsl(210, 40%, 98%);
   --accent: hsl(45, 93%, 47%);
 
+
   /* Semantic Colors */
   --slate-300: hsl(213, 27%, 84%);
   --slate-400: hsl(215, 20%, 65%);
@@ -28,9 +35,12 @@
   --slate-800: hsl(220, 20%, 15%);
   --slate-900: hsl(220, 26%, 10%);
   
+
   /* Other Variables */
   --radius: 0.5rem;
 }
+
+
 
 /* ========================================
    RESET & BASE STYLES
@@ -41,6 +51,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -50,9 +61,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
+
 
 /* ========================================
    UTILITY CLASSES
@@ -63,17 +77,21 @@ html {
   padding: 0 1rem;
 }
 
+
 @media (min-width: 640px) {
   .container {
     padding: 0 1.5rem;
   }
 }
 
+
 @media (min-width: 1024px) {
   .container {
     padding: 0 2rem;
   }
 }
+
+
 
 /* ========================================
    BUTTON STYLES
@@ -93,15 +111,18 @@ html {
   font-size: 1rem;
 }
 
+
 .btn-primary {
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
 
+
 .btn-primary:hover {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
 }
+
 
 .btn-outline {
   border: 2px solid var(--foreground);
@@ -109,14 +130,18 @@ html {
   background: transparent;
 }
 
+
 .btn-outline:hover {
   background-color: var(--foreground);
   color: var(--background);
 }
 
+
 .btn-full {
   width: 100%;
 }
+
+
 
 /* ========================================
    NAVIGATION
@@ -130,12 +155,14 @@ html {
   backdrop-filter: blur(8px);
 }
 
+
 .nav-container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 
 .nav-content {
   display: flex;
@@ -144,15 +171,18 @@ html {
   height: 4rem;
 }
 
+
 .nav-logo h1 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--foreground);
 }
 
+
 .nav-menu {
   display: none;
 }
+
 
 @media (min-width: 768px) {
   .nav-menu {
@@ -160,11 +190,13 @@ html {
   }
 }
 
+
 .nav-links {
   display: flex;
   gap: 2rem;
   margin-left: 2.5rem;
 }
+
 
 .nav-link {
   background: none;
@@ -177,10 +209,10 @@ html {
   font-size: 1rem;
 }
 
+
 .nav-link:hover {
   color: var(--primary);
 }
-
 
 
 
@@ -552,7 +584,7 @@ html {
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -583,7 +615,7 @@ html {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 18px -10px rgba(0, 0, 0, 0.25);
 }
 
 .project-image {
@@ -656,15 +688,8 @@ html {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-}
-
-@media (min-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  justify-content: center;
 }
 
 .contact-title {
@@ -676,18 +701,36 @@ html {
 
 .contact-items {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.9rem;
+  background-color: var(--slate-700);
+  border: 1px solid var(--slate-600);
+  color: var(--foreground);
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.6rem;
+  min-width: 220px;
+  min-height: 72px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-1px);
 }
 
 .contact-icon {
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,15 +738,31 @@ html {
 
 .icon {
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   justify-content: center;
   align-items: center;
   color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.icon img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-social-icon {
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .contact-label {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
   color: var(--foreground);
 }
 

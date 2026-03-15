@@ -11,7 +11,7 @@ const projects = [
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
         problem: "-Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won't be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.",
         about: "- The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.<br><br>- The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.<br><br>- The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.<br><br>- What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.",
-        imageUrl: "Logos/Fangamer Logo.png",
+        imageUrl: "Images/Logos/Fangamer Logo.png",
         challenges: "- The main challenge was creating and developing a wireframe that demonstrates the design ideas and interactions of the site, while also taking that wireframe and creating a prototype that shows the stages of the process. A challenge of making sure the material being learned is applied but also knowing that its in the beginning stages so it won't be perfect.",
         course: "- Digital Publishing (GIT 303)",
         program: "- Adobe XD",
@@ -20,10 +20,10 @@ const projects = [
         OriginalUrl: "https://www.fangamer.com/",
         PrototypeUrl: "https://xd.adobe.com/view/5b317f0a-5318-4210-9e7b-447fbd118887-0e62/?fullscreen",
         finalImages: [
-            "Projects/Fangamer screenshot 1.png",
-            "Projects/Fangamer screenshot 2.png",
-            "Projects/Fangamer screenshot 3.png",
-            "Projects/Fangamer screenshot 4.png",
+            "Images/Projects/Fangamer/Fangamer screenshot 1.png",
+            "Images/Projects/Fangamer/Fangamer screenshot 2.png",
+            "Images/Projects/Fangamer/Fangamer screenshot 3.png",
+            "Images/Projects/Fangamer/Fangamer screenshot 4.png",
         ]
     },
     {
@@ -34,7 +34,7 @@ const projects = [
         description: "A project done in my Information Design & Usability course (GIT 340), based on existing website 'eDreams', to show the process of creating wireframes and transition to a final frame.",
         problem: "- Users sometimes need more options after signing in successfully, such as a quick choice to continue or access settings to make changes if needed. Providing users with more freedom and easier access helps them have a smoother experience, as a lack of access could deter them from using the site.<br><br>- Try creating a wireframe that illustrates this scenario based on the travel website eDreams. With multiple types of wireframes, choose one and bring it to life with text, colors, and more to showcase it.",
         about: "- The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.<br><br>- The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.<br><br>- The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.<br><br>- What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.",
-        imageUrl: "Logos/eDreams Logo.png",
+        imageUrl: "Images/Logos/eDreams Logo.png",
         challenges: "- The main challenge was to effectively analyze the existing eDreams website and identify areas for improvement while creating wireframes that enhance user experience and usability. Ensuring that the wireframes were user-friendly and functional, while also trying to apply the principles of information design and usability, was a significant challenge I faced during this project.",
         course: "- Information Design & Usability (GIT 340)",
         program: "- Figma",
@@ -42,13 +42,13 @@ const projects = [
         status: "- Completed",
         OriginalUrl: "https://www.edreams.net/",
         finalImages: [
-            "Projects/eDreams screenshot 5.png",
+            "Images/Projects/eDreams/eDreams screenshot 5.png",
         ],
         galleryImages: [
-            "Projects/eDreams screenshot 1.png",
-            "Projects/eDreams screenshot 2.png",
-            "Projects/eDreams screenshot 3.png",
-            "Projects/eDreams screenshot 4.png",
+            "Images/Projects/eDreams/eDreams screenshot 1.png",
+            "Images/Projects/eDreams/eDreams screenshot 2.png",
+            "Images/Projects/eDreams/eDreams screenshot 3.png",
+            "Images/Projects/eDreams/eDreams screenshot 4.png",
         ]
     },
     {
@@ -59,7 +59,7 @@ const projects = [
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
         problem: "- Customers typically have limited options when it comes to soda brands, offering a narrow and unappealing selection, which attracts fewer consumers interested in trying new, unique flavors that differ from other brands. Having a wider selection would attract more consumers to the variety of their tasting palate than just a narrow selection.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
-        imageUrl: "Logos/Jones Soda Logo.png",
+        imageUrl: "Images/Logos/Jones Soda Logo.png",
         challenges: "- The main challenge was to effectively capture the essence of the brand while applying the skills learned in the course to speak out to the audience. Experimenting with different design elements and ensuring that the poster was visually appealing and aligned with the brand's identity was one of the challenges I faced during this project.",
         course: "- Digital Illustration in Publishing (GIT 230)",
         program: "- Adobe Photoshop",
@@ -67,11 +67,37 @@ const projects = [
         status: "- Completed",
         OriginalUrl: "https://www.jonessoda.com/",
         finalImages: [
-            "Projects/Jones Soda Poster Project.png",
+            "Images/Projects/Jones Soda/Jones Soda Poster Project.png",
         ]
     },
-
+    {
+        // Project 4: Wikipedia Wireframes
+        id: 4,
+        title: "Wikipedia Wireframes",
+        type: "academic",
+        description: "A Wikipedia redesign project focused on improving navigation, usability, and overall visual engagement.",
+        imageUrl: "Images/Logos/Wikipedia-logo.png"
+    },
+    {
+        // Project 5: Sky GIF
+        id: 5,
+        title: "Sky GIF",
+        type: "academic",
+        description: "A GIF project testing motion design skills in Adobe After Effects.",
+        imageUrl: "Images/Logos/Sky.png"
+    },
+    {
+        // Project 6: CSS & HTML Pages
+        id: 6,
+        title: "CSS & HTML Pages",
+        type: "academic",
+        description: "A collection of CSS and HTML pages showcasing front-end development skills.",
+        imageUrl: "Images/Logos/GitHub.png"
+    },
 ];
+
+
+
 
 // ========================================
 // DOM ELEMENTS & INITIALIZATION
@@ -84,7 +110,11 @@ const mobileMenu = document.getElementById('mobileMenu');
 document.addEventListener('DOMContentLoaded', function() {
     renderProjects();
     setupEventListeners();
+    sortSkillsAlphabetically();
 });
+
+
+
 
 // ========================================
 // PROJECT RENDERING FUNCTIONS
@@ -107,9 +137,12 @@ function createProjectCard(project) {
     
     // Get the project page URL based on project ID
     const projectPages = {
-        1: 'project-fangamer.html',
-        2: 'project-edreams.html',
-        3: 'project-jones-soda.html'
+        1: 'Projects/project-fangamer.html',
+        2: 'Projects/project-edreams.html',
+        3: 'Projects/project-jones-soda.html',
+        4: 'Projects/project-wikipedia.html',
+        5: 'Projects/project-sky.html',
+        6: 'Projects/project-css&html.html',
     };
     
     const projectUrl = projectPages[project.id] || '#';
@@ -255,11 +288,12 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.animationDelay = '0.1s';
             entry.target.classList.add('fade-in-up');
+            obs.unobserve(entry.target);
         }
     });
 }, observerOptions);
@@ -269,6 +303,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.project-card, .skill-tag');
     animateElements.forEach(el => observer.observe(el));
 });
+
+// Alphabetical the skills in the skills section
+function sortSkillsAlphabetically() {
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (!skillsGrid) return;
+
+    const skills = Array.from(skillsGrid.querySelectorAll('.skill-tag'));
+
+    skills
+        .sort((a, b) =>
+            a.textContent.trim().localeCompare(
+                b.textContent.trim(),
+                undefined,
+                { sensitivity: 'base' }
+            )
+        )
+        .forEach(skill => skillsGrid.appendChild(skill));
+}
+
+
+
 
 // ========================================
 // PROJECT DETAIL PAGE FUNCTIONS
@@ -284,6 +339,7 @@ function initGallery() {
     if (!galleryContainer) return;
     
     const images = galleryContainer.querySelectorAll('.gallery-image');
+    const shouldAutoAdvance = galleryContainer.dataset.autoAdvance !== 'false';
     let currentIndex = 0;
     let autoScrollInterval;
     
@@ -310,6 +366,8 @@ function initGallery() {
     }
     
     function resetAutoScroll() {
+        if (!shouldAutoAdvance) return;
+
         // Clear existing interval
         if (autoScrollInterval) {
             clearInterval(autoScrollInterval);
@@ -341,7 +399,7 @@ function initGallery() {
         indicator.addEventListener('click', () => manualShowImage(index));
     });
     
-    // Initialize auto-advance gallery
+    // Initialize auto-advance gallery (if enabled)
     resetAutoScroll();
     
     // Initialize first image
@@ -350,6 +408,9 @@ function initGallery() {
 
 // Initialize gallery on page load
 document.addEventListener('DOMContentLoaded', initGallery);
+
+
+
 
 // ========================================
 // IMAGE MODAL FUNCTIONALITY
@@ -388,8 +449,8 @@ function initImageModal() {
     const galleryContainer = document.querySelector('.gallery-images');
     if (galleryContainer) {
         galleryContainer.addEventListener('click', function(e) {
-            // Only respond to clicks on the active gallery image
-            if (e.target.classList.contains('gallery-image') && e.target.classList.contains('active')) {
+            // Only respond to clicks on active gallery IMG elements (skip videos)
+            if (e.target.tagName === 'IMG' && e.target.classList.contains('gallery-image') && e.target.classList.contains('active')) {
                 modal.style.display = 'block';
                 modalImage.src = e.target.src;
                 modalImage.alt = e.target.alt;

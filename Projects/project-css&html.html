@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & HTML Pages - Shereef Younis Portfolio</title>
+    <meta name="description" content="A collection of CSS and HTML pages showcasing my front-end development skills.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='../index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='../index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='../index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='../index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='../index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='../index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='../index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='../index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="back-navigation">
+                <button onclick="window.location.href='../index.html#projects'" class="btn btn-outline">← Back to Projects</button>
+            </div>
+
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h1>CSS & HTML Pages</h1>
+                    <p class="project-subtitle">A collection of CSS and HTML pages showcasing my front-end development skills</p>
+                </div>
+            </div>
+
+            <div class="project-links-header">
+                <div class="project-links">
+                    <a href="https://github.com/shereefyounis/path-to-success" target="_blank" class="btn btn-primary">Path to Success Github</a>
+                    <a href="https://github.com/shereefyounis/fieldandfeast" target="_blank" class="btn btn-outline">Field&Feast Github</a>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-images" id="galleryImages">
+                        <img src="../Images/Projects/CSS & HTML/fieldandfeast.png" alt="CSS & HTML Project Preview 1" class="gallery-image active">
+                        <img src="../Images/Projects/CSS & HTML/path-to-success 1.png" alt="CSS & HTML Project Preview 2" class="gallery-image">
+                        <img src="../Images/Projects/CSS & HTML/path-to-success 2.png" alt="CSS & HTML Project Preview 3" class="gallery-image">
+                        <img src="../Images/Projects/CSS & HTML/path-to-success 3.png" alt="CSS & HTML Project Preview 4" class="gallery-image">
+                    </div>
+                    <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
+                    <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
+                    <button class="gallery-btn gallery-prev" onclick="manualPrevImage()" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="manualNextImage()" aria-label="Next image">›</button>
+                    <div class="gallery-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-main">
+                    <section class="content-section">
+                        <h2>Background</h2>
+                        <p>These projects showcase my skills in creating responsive and visually appealing web pages using HTML and CSS.</p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>Trying to create websites that are able to display content effectively across different devices and screen sizes. 
+                            Also ensuring a good user experience with the layout of the content that was provided. </p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Process</h2>
+                        <div class="content-text">
+                            <p>The process involved designing and implementing responsive layouts using HTML and CSS. I focused on creating a consistent design and ensuring the pages were accessible and user-friendly.</p>
+                        </div>
+                    </section>
+                    <section class="content-section">
+                        <h2>Result</h2>
+                        <p>The result is a set of visually appealing and responsive web pages that effectively communicate the intended message and provide a good user experience. 
+                        Additionally, Path to Success is demonstating the understanding of HTML and CSS principles. 
+                        While Field & Feast is dememorstating not just the pricincples but taking it beyond with different screen sizes queries and more.</p>
+                    </section>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><strong>Softwares:</strong><span>Visual Studio Code <br> Github</span></div>
+                        <div class="detail-item"><strong>Languages:</strong><span>CSS <br> HTML</span></div>
+                        <div class="detail-item"><strong>Timeline:</strong><span>2 Weeks</span></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-fangamer.html" class="project-nav-link"><img src="../Images/Logos/Fangamer Logo.png" alt="Fangamer Logo"><span>Fangamer Wireframe</span></a>
+                            <a href="project-edreams.html" class="project-nav-link"><img src="../Images/Logos/eDreams Logo.png" alt="eDreams Logo"><span>eDreams Wireframe</span></a>
+                            <a href="project-jones-soda.html" class="project-nav-link"><img src="../Images/Logos/Jones Soda Logo.png" alt="Jones Soda Logo"><span>Jones Soda Poster</span></a>
+                            <a href="project-wikipedia.html" class="project-nav-link"><img src="../Images/Logos/Wikipedia-logo.png" alt="Wikipedia Logo"><span>Wikipedia Wireframes</span></a>
+                            <a href="project-sky.html" class="project-nav-link"><img src="../Images/Logos/Sky.png" alt="Sky Logo"><span>Sky: Children of the Light GIF</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p class="footer-text">© Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com</p>
+    </div>
+
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

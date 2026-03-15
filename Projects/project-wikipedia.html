@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Wireframes - Shereef Younis Portfolio</title>
+    <meta name="description" content="Wikipedia Wireframes project - A project testing User Interface design and prototyping skills using FIgma.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <h1>Shereef Younis</h1>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-links">
+                        <button onclick="window.location.href='../index.html#home'" class="nav-link">Home</button>
+                        <button onclick="window.location.href='../index.html#about'" class="nav-link">About</button>
+                        <button onclick="window.location.href='../index.html#projects'" class="nav-link">Projects</button>
+                        <button onclick="window.location.href='../index.html#contact'" class="nav-link">Contact</button>
+                    </div>
+                </div>
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()" class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <button onclick="window.location.href='../index.html#home'; closeMobileMenu()" class="mobile-link">Home</button>
+                    <button onclick="window.location.href='../index.html#about'; closeMobileMenu()" class="mobile-link">About</button>
+                    <button onclick="window.location.href='../index.html#projects'; closeMobileMenu()" class="mobile-link">Projects</button>
+                    <button onclick="window.location.href='../index.html#contact'; closeMobileMenu()" class="mobile-link">Contact</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="back-navigation">
+                <button onclick="window.location.href='../index.html#projects'" class="btn btn-outline">← Back to Projects</button>
+            </div>
+
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h1>Wikipedia Wireframes</h1>
+                    <p class="project-subtitle">The Wiki That Holds All Information</p>
+                </div>
+            </div>
+
+            <div class="project-links-header">
+                <div class="project-links">
+                    <a href="https://www.wikipedia.org/" target="_blank" class="btn btn-primary">View Original Site</a>
+                    <a href="https://www.figma.com/proto/1rxYIyQif5cqcnBPpy24am/Wikipedia-Final-High-Fidelity-Prototype---Shereef-Younis?node-id=1-2&p=f&t=ijj7bdaUu8x54gwH-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" class="btn btn-outline">View Prototype</a>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-images" id="galleryImages">
+                        <img src="../Images/Projects/Wikipedia/1-Home Page.png" alt="Wikipedia Wireframes Home Page" class="gallery-image active">
+                        <img src="../Images/Projects/Wikipedia/2-Main Page.png" alt="Wikipedia Wireframes Main Page" class="gallery-image">
+                        <img src="../Images/Projects/Wikipedia/3-Content Page.png" alt="Wikipedia Wireframes Content Page" class="gallery-image">
+                        <img src="../Images/Projects/Wikipedia/4-Wiki Page 1.png" alt="Wikipedia Wireframes Wiki Page 1" class="gallery-image">
+                        <img src="../Images/Projects/Wikipedia/5-Wiki Page 2.png" alt="Wikipedia Wireframes Wiki Page 2" class="gallery-image">
+                    </div>
+                    <button class="gallery-nav-zone gallery-nav-left" onclick="manualPrevImage()" aria-label="Previous image"></button>
+                    <button class="gallery-nav-zone gallery-nav-right" onclick="manualNextImage()" aria-label="Next image"></button>
+                    <button class="gallery-btn gallery-prev" onclick="manualPrevImage()" aria-label="Previous image">‹</button>
+                    <button class="gallery-btn gallery-next" onclick="manualNextImage()" aria-label="Next image">›</button>
+                    <div class="gallery-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-main">
+                    <section class="content-section">
+                        <h2>Background</h2>
+                        <p>The clients are curious individuals seeking information online to answer their questions. 
+                        They research through various websites to find different answers related to their interests. 
+                        As part of the general public, they engage in many online activities, all sharing the common goal of obtaining answers from diverse sources such as wikis. ​​​​​​</p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>Internet users exploring sites like Wikipedia often find the experience less engaging. 
+                        The Wikipedia site requires a redesign to enhance user-friendliness and improve navigation, providing users with a better experience.​​​​​​​</p>
+                    </section>
+                    <section class="content-section">
+                        <h2>Process</h2>
+                        <div class="content-text">
+                            <p>The research provided insights into how users understand and feel about different aspects of the site, such as navigation, design, and images. 
+                            These insights helped me prioritize what was most important during the redesign. 
+                            I focused on a few key pages to highlight the potential of the redesign and show how they connect. 
+                            The choices were driven by research findings, guiding the development of designs and prototypes to showcase to users and stakeholders.​​​​​​​</p>
+                        </div>
+                    </section>
+                    <section class="content-section">
+                        <h2>Result</h2>
+                        <p>Users of Wikipedia experienced an improved interface with better visuals—text, 
+                        images, and more —and increased navigation friendliness, creating a more enjoyable research journey.​​​​​​​</p>
+                    </section>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><strong>Software:</strong><span>Figma</span></div>
+                        <div class="detail-item"><strong>Timeline:</strong><span>2 Weeks</span></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>Other Projects</h3>
+                        <div class="project-nav-links">
+                            <a href="project-fangamer.html" class="project-nav-link"><img src="../Images/Logos/Fangamer Logo.png" alt="Fangamer Logo"><span>Fangamer Wireframe</span></a>
+                            <a href="project-edreams.html" class="project-nav-link"><img src="../Images/Logos/eDreams Logo.png" alt="eDreams Logo"><span>eDreams Wireframe</span></a>
+                            <a href="project-jones-soda.html" class="project-nav-link"><img src="../Images/Logos/Jones Soda Logo.png" alt="Jones Soda Logo"><span>Jones Soda Poster</span></a>
+                            <a href="project-sky.html" class="project-nav-link"><img src="../Images/Logos/Sky.png" alt="Sky Logo"><span>Sky: Children of the Light GIF</span></a>
+                            <a href="project-css&html.html" class="project-nav-link"><img src="../Images/Logos/GitHub.png" alt="CSS & HTML Pages Logo"><span>CSS & HTML Pages</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p class="footer-text">© Copyright <script>document.write(new Date().getFullYear())</script> shereefyounis.com</p>
+    </div>
+
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
