@@ -7,7 +7,6 @@ const projects = [
         // Project 1: Fangamer Wireframe
         id: 1,
         title: "Fangamer Wireframe",
-        type: "academic",
         description: "A project testing User Interface design and prototyping skills using Adobe XD to modify an existing company website.",
         problem: "-Attempting to modify an existing site, specifically Fangamer, by adjusting its layout on the homepage, cart, checkout, and confirmation screens. Using wireframes to present the new design and give it a fresh look. While it won't be perfect, the goal is to explore a variety of ideas and designs for the site beyond the current one, providing more layout options to work with.",
         about: "- The focus of this project was to test my User Interface design and prototyping skills using Adobe XD, by modifying an existing company website, Fangamer.<br><br>- The project involved analyzing the existing Fangamer website, areas of improvement or changes were identified, and a new wireframe was created to help with the prototyping process.<br><br>- The wireframe was designed to show the designs of improvements or changes of the site in different states and interactions.<br><br>- What I have learned from this project is improtances of wireframing and prototyping in the design process. It allows for a demonstration of the design ideas and interactions before moving on in the projects stages.",
@@ -30,7 +29,6 @@ const projects = [
         // Project 2: eDreams Wireframe
         id: 2,
         title: "eDreams Wireframe",
-        type: "academic",
         description: "A project done in my Information Design & Usability course (GIT 340), based on existing website 'eDreams', to show the process of creating wireframes and transition to a final frame.",
         problem: "- Users sometimes need more options after signing in successfully, such as a quick choice to continue or access settings to make changes if needed. Providing users with more freedom and easier access helps them have a smoother experience, as a lack of access could deter them from using the site.<br><br>- Try creating a wireframe that illustrates this scenario based on the travel website eDreams. With multiple types of wireframes, choose one and bring it to life with text, colors, and more to showcase it.",
         about: "- The focus of this project was to create a wireframe for the eDreams website, which is a travel booking platform, and to show the process of creating wireframes and transitioning to a final frame.<br><br>- The project involved analyzing the existing eDreams website, identifying areas for improvement, and creating wireframes that enhance user experience and usability.<br><br>- The wireframes were designed to be user-friendly and functional, ensuring that users can easily navigate through the website and find the information they need.<br><br>- What I have learned from this project is the importance of wireframing in the design process, as it allows for quick iterations and feedback before moving on to the final design.",
@@ -55,7 +53,6 @@ const projects = [
         // Project 3: Jones Soda Poster
         id: 3,
         title: "Jones Soda Poster",
-        type: "academic",
         description: "A poster created in my Digital Illustration in Publishing course (GIT 230) for a known brand using Adobe Illustrator.",
         problem: "- Customers typically have limited options when it comes to soda brands, offering a narrow and unappealing selection, which attracts fewer consumers interested in trying new, unique flavors that differ from other brands. Having a wider selection would attract more consumers to the variety of their tasting palate than just a narrow selection.",
         about: "- The focus of this project was to create a visually appealing poster that effectively represents the brand that I chose, Jones Soda, while applying the skills learned in the course for Adobe Photoshop.<br><br>- I chose Jones Soda because of its unique branding and vibrant colors that allows for creative freedom and experimentation with design elements. But its also a brand that I have always enjoyed and grew up with, so I wanted to try creating a poster for it.<br><br>- The poster is designed to capture the essence of Jones Soda's fun and quirky personality, from using bold letters to bring attention, using shadows to bring the depth of the poster, similar but light colors that goes along with the soda's coloring, and adding a slogan that represents the brand.<br><br>- What I have learned from this project is to trying to take a brand and create a poster that represents it to speak to the audience, while also applying the skills learned in the course regarding Adobe Photoshop.",
@@ -74,7 +71,6 @@ const projects = [
         // Project 4: Wikipedia Wireframes
         id: 4,
         title: "Wikipedia Wireframes",
-        type: "academic",
         description: "A Wikipedia redesign project focused on improving navigation, usability, and overall visual engagement.",
         imageUrl: "Images/Logos/Wikipedia-logo.png"
     },
@@ -82,7 +78,6 @@ const projects = [
         // Project 5: Sky GIF
         id: 5,
         title: "Sky GIF",
-        type: "academic",
         description: "A GIF project testing motion design skills in Adobe After Effects.",
         imageUrl: "Images/Logos/Sky.png"
     },
@@ -90,7 +85,6 @@ const projects = [
         // Project 6: CSS & HTML Pages
         id: 6,
         title: "CSS & HTML Pages",
-        type: "academic",
         description: "A collection of CSS and HTML pages showcasing front-end development skills.",
         imageUrl: "Images/Logos/GitHub.png"
     },
@@ -160,7 +154,6 @@ function createProjectCard(project) {
         >
         <div class="project-content">
             <h3 class="project-title">${project.title}</h3>
-            <div class="project-badge ${project.type}">${project.type}</div>
         </div>
     `;
     
